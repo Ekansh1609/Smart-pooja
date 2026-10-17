@@ -140,7 +140,7 @@ export default function Home() {
       </section>
 
       {/* Featured Pandits Section */}
-      <section className="py-20 bg-stone-100 pattern-mandala border-y border-stone-200 overflow-hidden">
+      <section className=" hidden py-20 bg-stone-100 pattern-mandala border-y border-stone-200 overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <SectionHeader title="Experienced Vedic Pandits" subtitle="Verified & Trusted" />
 
@@ -353,7 +353,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className=" hidden py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center space-y-6">
           <h2 className="text-4xl md:text-5xl font-display font-bold">Are you a Pandit?</h2>
           <p className="text-xl max-w-2xl mx-auto opacity-90">

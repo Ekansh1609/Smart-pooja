@@ -33,11 +33,13 @@ export function Hero() {
             authentic vidhi and devotion.
           </p>
 
+          
+
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link to="/pandits">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 h-14 rounded-full shadow-lg hover:shadow-primary/25 transition-all"
+                className=" hidden bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 h-14 rounded-full shadow-lg hover:shadow-primary/25 transition-all"
               >
                 Find a Pandit
                 <ArrowRight className="ml-2 w-5 h-5" />
