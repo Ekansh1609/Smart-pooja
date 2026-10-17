@@ -45,7 +45,7 @@ export const POOJAS_NEW = [
     id: 1,
     name: 'Annaprashan Puja',
     category: 'Child Rituals & Sanskar',
-    image: '/images/pujas/annaprashan.jpg',
+    image: '/images/Annaprashan Puja.jpg',
     shortDesc: "A sacred first feeding ceremony marking a baby's transition to solid food.",
     fullDesc:
       "Annaprashan, also known as the 'First Feeding Ceremony,' is the seventh of the sixteen Vedic Shodasha Sanskars. It marks a significant milestone in a child's life when they are introduced to solid food for the first time, usually in the form of rice or kheer. This ritual is performed to seek blessings for the child's health, prosperity, and wisdom, ensuring a nourished and fulfilling life ahead.",
@@ -137,7 +137,7 @@ export const POOJAS_NEW = [
     id: 2,
     name: 'Bajrang Baan Path',
     category: 'Protection & Strength',
-    image: 'https://insightsofhinduism.com/wp-content/uploads/2024/05/image-6.png',
+    image: '/images/Bajrang Ban.jpg',
     shortDesc: 'A powerful Hanuman path to remove fear, enemies, and life obstacles.',
     fullDesc:
       "Bajrang Baan is a highly powerful devotional hymn dedicated to Lord Hanuman, composed by Saint Tulsidas. Known as a 'Baan' (arrow), it is believed to directly invoke Lord Hanuman’s divine intervention. This path is especially performed during times of fear, crisis, or when facing seemingly impossible obstacles, offering protection, courage, and strength.",
@@ -229,7 +229,7 @@ export const POOJAS_NEW = [
     id: 3,
     name: 'Bhoomi Puja',
     category: 'Property & Construction',
-    image: '/images/pujas/bhoomi-puja.webp',
+    image: '/images/Bhoomi Pujan.jpg',
     shortDesc:
       'Sacred ritual performed before construction to seek blessings of Mother Earth and Vastu Purush.',
     fullDesc:
@@ -321,7 +321,7 @@ export const POOJAS_NEW = [
     id: 4,
     name: 'Engagement Puja (Sagai/Roka)',
     category: 'Marriage & Relationships',
-    image: '/images/pujas/engagement.webp',
+    image: '/images/Roka Ceremony (Engagement).jpg',
     shortDesc:
       'Sacred ceremony marking the formal commitment between two individuals and families.',
     fullDesc:

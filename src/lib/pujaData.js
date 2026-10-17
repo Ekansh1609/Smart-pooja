@@ -5,7 +5,7 @@ export const PUJAS_DATA = [
     id: 1,
     name: 'Annaprashan Puja',
     category: 'Child Rituals & Sanskar',
-    image: '/images/pujas/annaprashan.jpg',
+    image: '/images/Annaprashan Puja.jpg',
     shortDesc: "A sacred first feeding ceremony marking a baby's transition to solid food.",
     fullDesc:
       "Annaprashan, also known as the 'First Feeding Ceremony,' is the seventh of the sixteen Vedic Shodasha Sanskars. It marks a significant milestone in a child's life when they are introduced to solid food for the first time, usually in the form of rice or kheer. This ritual is performed to seek blessings for the child's health, prosperity, and wisdom, ensuring a nourished and fulfilling life ahead.",
@@ -97,7 +97,7 @@ export const PUJAS_DATA = [
     id: 2,
     name: 'Bajrang Baan Path',
     category: 'Protection & Strength',
-    image: 'https://insightsofhinduism.com/wp-content/uploads/2024/05/image-6.png',
+    image: '/images/Bajrang Ban.jpg',
     shortDesc: 'A powerful Hanuman path to remove fear, enemies, and life obstacles.',
     fullDesc:
       "Bajrang Baan is a highly powerful devotional hymn dedicated to Lord Hanuman, composed by Saint Tulsidas. Known as a 'Baan' (arrow), it is believed to directly invoke Lord Hanuman’s divine intervention. This path is especially performed during times of fear, crisis, or when facing seemingly impossible obstacles, offering protection, courage, and strength.",
@@ -189,7 +189,7 @@ export const PUJAS_DATA = [
     id: 3,
     name: 'Bhoomi Puja',
     category: 'Property & Construction',
-    image: '/images/pujas/bhoomi-puja.webp',
+    image: '/images/Bhoomi Pujan.jpg',
     shortDesc:
       'Sacred ritual performed before construction to seek blessings of Mother Earth and Vastu Purush.',
     fullDesc:
@@ -281,7 +281,7 @@ export const PUJAS_DATA = [
     id: 4,
     name: 'Engagement Puja (Sagai/Roka)',
     category: 'Marriage & Relationships',
-    image: '/images/pujas/engagement.webp',
+    image: '/images/Roka Ceremony (Engagement).jpg',
     shortDesc:
       'Sacred ceremony marking the formal commitment between two individuals and families.',
     fullDesc:
@@ -375,8 +375,7 @@ export const PUJAS_DATA = [
     id: 5,
     name: 'Garuda Puran Path',
     category: 'Afterlife & Rituals',
-    image:
-      'https://img-cdn.publive.online/fit-in/1280x960/filters:format(webp)/newsnation/media/post_attachments/images/2024/05/08/garudpuranpathsignificance-90.jpeg',
+    image:'/images/Garun Puran Path.jpg',
     shortDesc: 'Sacred recitation for peace, guidance, and liberation of the departed soul.',
     fullDesc:
       'Garuda Puran is one of the eighteen Mahapuranas, presenting a deep spiritual dialogue between Lord Vishnu and Garuda (the King of Birds). It explains the journey of the soul after death, karma, and the cycle of rebirth. This path is traditionally recited during the 13-day mourning period after a loved one’s passing to guide the soul toward peace, liberation, and higher realms.',
@@ -467,7 +466,7 @@ export const PUJAS_DATA = [
     id: 6,
     name: 'Guru Rahu Chandal Yog Puja',
     category: 'Astrology & Dosha Remedies',
-    image: 'https://www.kalsarp-yog.com/wp-content/uploads/2026/01/guru-chandal-rahu-600x400.png',
+    image: '/images/Guru Rahu Chandal Yog.jpg',
     shortDesc:
       'A powerful puja to neutralize Guru-Rahu dosha and restore clarity, stability, and wisdom.',
     fullDesc:
@@ -561,8 +560,7 @@ export const PUJAS_DATA = [
     id: 7,
     name: 'Kaal Sarp Dosh Puja',
     category: 'Astrology & Dosha Remedies',
-    image:
-      'https://temple.yatradham.org/public/Product/puja-rituals/puja-rituals_KFIfdfVP_202311031506180.jpg',
+    image:'/images/Kal Sharp Dosh.jpg',
     shortDesc:
       'A powerful puja to neutralize Kaal Sarp Dosh and bring stability, peace, and success in life.',
     fullDesc:
@@ -655,7 +653,7 @@ export const PUJAS_DATA = [
     id: 8,
     name: 'Maha Ganapati Homa',
     category: 'Advanced Rituals & Homa',
-    image: 'https://www.kamalkapoor.com/images/puja/ganapathi-homam-puja.jpg',
+    image: '/images/Ganesh Puja.jpg',
     shortDesc:
       'A powerful homa to remove deep-rooted obstacles, balance energy, and ensure success in all endeavors.',
     fullDesc:
@@ -771,8 +769,7 @@ export const PUJAS_DATA = [
     id: 9,
     name: 'Maha Mrityunjaya Mantra Puja',
     category: 'Health & Protection',
-    image:
-      'https://www.mahakaalprasad.com/cdn/shop/files/maxresdefault-1024x576_1024x1024@2x.jpg?v=1716302614',
+    image:'/images/Mahamrityunjay Mantra Jap puja.jpg',
     shortDesc: 'A powerful Shiva puja for healing, protection, and longevity.',
     fullDesc:
       'The Maha Mrityunjaya Mantra, also known as the Rudra Mantra or Tryambakam Mantra, is a highly revered Vedic chant dedicated to Lord Shiva. Originating from the Rigveda, it is considered one of the most powerful mantras for healing, protection, and spiritual upliftment. This puja is performed to overcome fear, illness, and negativity, while seeking longevity, peace, and liberation (Moksha).',
@@ -866,8 +863,7 @@ export const PUJAS_DATA = [
     id: 10,
     name: 'Mundan Puja (Tonsure Ceremony)',
     category: 'Child Rituals & Sanskar',
-    image:
-      'https://www.panditaryasamaj.com/storage/pages/FtwlNCj08u3euPQodwl1u5jU8tphlJ4rpzIXyJHM.webp',
+    image:'/images/Mundan Sankar.jpg',
     shortDesc:
       "A sacred ritual marking a child's first hair removal for purification and healthy growth.",
     fullDesc:
@@ -964,8 +960,7 @@ export const PUJAS_DATA = [
     id: 11,
     name: 'Navratri Durga Puja',
     category: 'Festivals & Deities',
-    image:
-      'https://c.ndtvimg.com/2023-10/ng82g4e_durga-puja_625x300_06_October_23.jpg?downsize=773:435',
+    image:'/images/Durga Puja.jpg',
     shortDesc:
       'Nine-day festival dedicated to Goddess Durga for शक्ति, prosperity, and protection.',
     fullDesc:
@@ -1061,7 +1056,7 @@ export const PUJAS_DATA = [
     id: 12,
     name: 'Rudrabhishek Puja',
     category: 'Health & Protection',
-    image: 'https://www.pitradev.com/image/catalog/Background.jpg',
+    image: '/images/Rudrabhishek.jpg',
     shortDesc:
       'A powerful Shiva ritual involving sacred Abhishek to remove negativity and bring peace and prosperity.',
     fullDesc:
@@ -1157,7 +1152,7 @@ export const PUJAS_DATA = [
     id: 13,
     name: 'Shani Shanti Puja',
     category: 'Astrology & Dosha Remedies',
-    image: 'https://onlinepoojan.com/wp-content/uploads/2024/02/Shani-Shanti-Pooja-600x398.jpg',
+    image: '/images/Shani Shanti Puja.jpg',
     shortDesc:
       'A powerful puja to reduce the effects of Shani (Saturn) and bring stability, discipline, and success.',
     fullDesc:
@@ -1251,7 +1246,7 @@ export const PUJAS_DATA = [
     id: 14,
     name: 'Vastu Shanti Puja',
     category: 'Property & Construction',
-    image: 'https://www.speedypandit.com/admin/puja/20220418104904.png',
+    image: '/images/Vastu Shanti Puja.jpg',
     shortDesc:
       'A sacred puja to remove Vastu dosha and restore positive energy and harmony in a home.',
     fullDesc:
@@ -1349,7 +1344,7 @@ export const PUJAS_DATA = [
     id: 15,
     name: 'Dhanteras Puja',
     category: 'Festivals & Deities',
-    image: 'https://i.ytimg.com/vi/-e5Q49lcWHk/maxresdefault.jpg',
+    image: '/images/Dhanteras Puja.jpg',
     shortDesc: 'A sacred Diwali ritual to invite health, wealth, and prosperity into the home.',
     fullDesc:
       'Dhanteras, also known as Dhanvantari Trayodashi, marks the beginning of the five-day Diwali festival. On this auspicious day, Lord Dhanvantari (the God of Ayurveda), Lord Kubera (the God of Wealth), and Goddess Lakshmi are worshipped. It is considered highly शुभ to purchase gold, silver, or utensils, symbolizing the invitation of prosperity and well-being into the household.',
@@ -1440,7 +1435,7 @@ export const PUJAS_DATA = [
     id: 16,
     name: 'Office Opening Puja',
     category: 'Business & Prosperity',
-    image: 'https://placehold.co/600x400?text=Office+Opening+Puja',
+    image: '/images/Office Opening Puja.jpg',
     shortDesc:
       'A sacred office inauguration ritual to invite prosperity, remove Vastu doshas, and ensure business success.',
     fullDesc:
@@ -1555,7 +1550,7 @@ export const PUJAS_DATA = [
     id: 17,
     name: 'Saraswati Puja',
     category: 'Education & Knowledge',
-    image: 'https://placehold.co/600x400?text=Saraswati+Puja',
+    image: '/images/Saraswati Puja.jpg',
     shortDesc:
       'A sacred puja to invoke Goddess Saraswati for wisdom, creativity, academic success, and intellectual growth.',
     fullDesc:
@@ -1680,7 +1675,7 @@ export const PUJAS_DATA = [
     id: 18,
     name: 'Vedic Marriage Puja',
     category: 'Marriage & Relationships',
-    image: 'https://placehold.co/600x400?text=Vedic+Marriage+Puja',
+    image: '/images/Vedic Marriage Puja.jpg',
     shortDesc:
       'A sacred Vedic wedding ceremony that unites two souls through divine rituals, blessings, and lifelong vows.',
     fullDesc:
@@ -1803,7 +1798,7 @@ export const PUJAS_DATA = [
     id: 19,
     name: 'Shri Lakshmi Narasimha Homam',
     category: 'Protection & Prosperity',
-    image: 'https://placehold.co/600x400?text=Lakshmi+Narasimha+Homam',
+    image: '/images/Shri Lakshmi Narasimha Homam.jpg',
     shortDesc:
       'A powerful homam that invokes Lord Narasimha and Goddess Lakshmi for divine protection, prosperity, and removal of obstacles.',
     fullDesc:
@@ -1929,7 +1924,7 @@ export const PUJAS_DATA = [
     id: 20,
     name: 'Nishkramana Sanskar',
     category: 'Child Rituals & Sanskar',
-    image: 'https://placehold.co/600x400?text=Nishkramana+Sanskar',
+    image: '/images/Nishkramana Sanskar.jpg',
     shortDesc:
       'The sacred first outing ceremony that introduces a child to nature and the five cosmic elements.',
     fullDesc:
@@ -2045,7 +2040,7 @@ export const PUJAS_DATA = [
     id: 21,
     name: 'Shri Ekadashi Vrat Udyapan',
     category: 'Festivals & Deities',
-    image: 'https://placehold.co/600x400?text=Ekadashi+Vrat+Udyapan',
+    image: '/images/Shri Ekadashi Vrat Udyapan.jpg',
     shortDesc:
       'The sacred concluding ceremony of the Ekadashi fasting cycle, dedicated to Lord Vishnu for spiritual completion and divine blessings.',
     fullDesc:
@@ -2161,7 +2156,7 @@ export const PUJAS_DATA = [
     id: 22,
     name: 'Brahmin Bhojan & Daan',
     category: 'Charity & Ritual Completion',
-    image: 'https://placehold.co/600x400?text=Brahmin+Bhojan+%26+Daan',
+    image: '/images/Brahmin Bhojan & Daan.jpg',
     shortDesc:
       'A sacred ritual of feeding Brahmins and offering charity to complete Vedic ceremonies and accumulate lasting spiritual merit.',
     fullDesc:
@@ -2281,7 +2276,7 @@ export const PUJAS_DATA = [
     id: 23,
     name: 'Pitru Paksha Shradh Ritual',
     category: 'Ancestral Rituals',
-    image: 'https://placehold.co/600x400?text=Pitru+Paksha+Shradh',
+    image: '/images/Pitru Paksha Shradh Ritual.jpg',
     shortDesc:
       'A sacred ancestral ritual performed during Pitru Paksha to honor departed souls, seek their blessings, and remove Pitru Dosha.',
     fullDesc:
@@ -2421,7 +2416,7 @@ export const PUJAS_DATA = [
     id: 24,
     name: 'Akhand Ramayan Path',
     category: 'Festivals & Deities',
-    image: 'https://placehold.co/600x400?text=Akhand+Ramayan+Path',
+    image: '/images/Akhand Ramayan Path.jpg',
     shortDesc:
       'A 24-hour uninterrupted recitation of Shri Ramcharitmanas to invoke the blessings of Lord Rama, peace, prosperity, and spiritual harmony.',
     fullDesc:
@@ -2548,7 +2543,7 @@ export const PUJAS_DATA = [
     id: 25,
     name: 'Putrakameshti Homam',
     category: 'Family & Progeny',
-    image: 'https://placehold.co/600x400?text=Putrakameshti+Homam',
+    image: '/images/Putrakameshti Homam.jpg',
     shortDesc:
       'A sacred Vedic fire ritual performed to seek divine blessings for healthy, virtuous, and prosperous offspring.',
     fullDesc:
@@ -2672,7 +2667,7 @@ export const PUJAS_DATA = [
     id: 26,
     name: 'Nakshatra Shanti Puja',
     category: 'Astrology & Dosha Remedies',
-    image: 'https://placehold.co/600x400?text=Nakshatra+Shanti+Puja',
+    image: '/images/Nakshatra Shanti Puja.jpg',
     shortDesc:
       "A sacred Vedic ritual performed to harmonize the energies of one's birth star and remove planetary obstacles.",
     fullDesc:
@@ -2795,7 +2790,7 @@ export const PUJAS_DATA = [
     id: 27,
     name: 'Uma Maheshwari Puja',
     category: 'Marriage & Relationships',
-    image: 'https://placehold.co/600x400?text=Uma+Maheshwari+Puja',
+    image: '/images/Uma Maheshwari Puja.jpg',
     shortDesc:
       'A sacred Vedic ritual dedicated to Lord Shiva and Goddess Parvati for marital harmony, love, prosperity, and family well-being.',
     fullDesc:
@@ -2919,7 +2914,7 @@ export const PUJAS_DATA = [
     id: 28,
     name: 'Karnavedha Sanskar',
     category: 'Child Rituals & Sanskar',
-    image: 'https://placehold.co/600x400?text=Karnavedha+Sanskar',
+    image: '/images/Karnavedha Sanskar.jpg',
     shortDesc:
       "A sacred ear-piercing ceremony that marks an important milestone in a child's spiritual and physical development.",
     fullDesc:
@@ -3040,7 +3035,7 @@ export const PUJAS_DATA = [
     id: 29,
     name: 'Das Mahavidya Puja',
     category: 'Festivals & Deities',
-    image: 'https://placehold.co/600x400?text=Das+Mahavidya+Puja',
+    image: '/images/Das Mahavidya Puja.jpg',
     shortDesc:
       'A sacred Tantric worship of the ten Mahavidyas to seek divine wisdom, spiritual transformation, and protection.',
     fullDesc:
@@ -3166,7 +3161,7 @@ export const PUJAS_DATA = [
     id: 30,
     name: 'Udaka Shanti Puja',
     category: 'Home & Prosperity',
-    image: 'https://placehold.co/600x400?text=Udaka+Shanti+Puja',
+    image: '/images/Udaka Shanti Puja.jpg',
     shortDesc:
       'A sacred Vedic purification ritual that invokes peace, removes negative energies, and sanctifies homes through consecrated water.',
     fullDesc:
@@ -3290,7 +3285,7 @@ export const PUJAS_DATA = [
     id: 31,
     name: 'Govardhan Puja',
     category: 'Festivals & Deities',
-    image: 'https://placehold.co/600x400?text=Govardhan+Puja',
+    image: '/images/Govardhan Puja.jpg',
     shortDesc:
       'A sacred festival dedicated to Lord Krishna, celebrating Govardhan Hill and expressing gratitude to nature, abundance, and divine protection.',
     fullDesc:
@@ -3432,7 +3427,7 @@ export const PUJAS_DATA = [
     id: 32,
     name: 'Sundarkand Path',
     category: 'Festivals & Deities',
-    image: 'https://placehold.co/600x400?text=Sundarkand+Path',
+    image: '/images/Sundarkand Path.jpg',
     shortDesc:
       "A sacred recitation of Sundarkand from the Ramayana to invoke Lord Hanuman's blessings for strength, protection, peace, and success.",
     fullDesc:
@@ -3553,7 +3548,7 @@ export const PUJAS_DATA = [
     id: 33,
     name: 'Tripindi Shradh Puja',
     category: 'Ancestor Rituals',
-    image: 'https://placehold.co/600x400?text=Tripindi+Shradh+Puja',
+    image: '/images/Tripindi Shradh Puja.jpg',
     shortDesc:
       'A sacred Vedic ritual performed to bring peace to ancestors, remove Pitru Dosha, and seek harmony, prosperity, and blessings for future generations.',
     fullDesc:
@@ -3677,7 +3672,7 @@ export const PUJAS_DATA = [
     id: 34,
     name: 'Krishna Janmashtami Puja',
     category: 'Festivals & Deities',
-    image: 'https://placehold.co/600x400?text=Krishna+Janmashtami',
+    image: '/images/Krishna Janmashtami Puja.jpg',
     shortDesc:
       'Celebrate the divine birth of Lord Krishna with sacred Janmashtami Puja, midnight worship, and devotional offerings for peace, prosperity, and spiritual growth.',
     fullDesc:

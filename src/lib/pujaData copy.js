@@ -69,7 +69,7 @@ export const PUJAS_DATA = [
     id: 7,
     name: 'Saraswati Puja',
     category: 'Education & Career',
-    image: 'https://placehold.co/600x400?text=Saraswati',
+    image: '/images/Saraswati Puja.jpg',
     shortDesc: 'Worship of the Goddess of Knowledge and Arts.',
     fullDesc:
       'Ideal for students and artists, this puja invokes Goddess Saraswati to grant wisdom, learning, and artistic excellence.',
@@ -145,7 +145,7 @@ export const PUJAS_DATA = [
     id: 14,
     name: 'Vastu Shanti Puja',
     category: 'Home & Prosperity',
-    image: 'https://placehold.co/600x400?text=Vastu+Shanti',
+    image: '/images/Vastu Shanti Puja.jpg',
     shortDesc: 'Correcting Vastu doshas in a home or office.',
     fullDesc:
       'Performed to appease the Vastu Purush and correct construction faults or energy imbalances.',

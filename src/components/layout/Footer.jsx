@@ -49,7 +49,7 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/pandits">
-                  <div className="hover:text-primary transition-colors">Find a Pandit</div>
+                  <div className=" hidden hover:text-primary transition-colors">Find a Pandit</div>
                 </Link>
               </li>
               <li>

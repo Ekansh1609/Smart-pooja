@@ -13,7 +13,7 @@ export function Navbar() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/poojas', label: 'Pooja Services' },
-    { href: '/pandits', label: 'Find Pandit' },
+    /* { href: '/pandits', label: 'Find Pandit' }, */
     { href: '/astrology', label: 'Astrology' },
   ];
 
@@ -75,7 +75,7 @@ export function Navbar() {
             +91 98765 43210
           </Button>
           <Link to="/register">
-            <Button className="bg-secondary hover:bg-secondary/90 text-white font-semibold shadow-md">
+            <Button className="hidden bg-secondary hover:bg-secondary/90 text-white font-semibold shadow-md">
               Pandit Registration
             </Button>
           </Link>
@@ -121,7 +121,7 @@ export function Navbar() {
             </select>
           </div>
           <Link to="/register">
-            <Button className="w-full bg-secondary text-white" onClick={() => setIsOpen(false)}>
+            <Button className=" hidden w-full bg-secondary text-white" onClick={() => setIsOpen(false)}>
               Pandit Registration
             </Button>
           </Link>

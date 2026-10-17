@@ -118,7 +118,7 @@ export default function Register() {
             <div className="md:col-span-3">
               <Card>
                 <CardHeader>
-                  <CardTitle className="font-display text-2xl">Pandit Registration</CardTitle>
+                  <CardTitle className=" hidden font-display text-2xl">Pandit Registration</CardTitle>
                   <CardDescription>
                     Fill in your details to become a verified partner.
                   </CardDescription>
