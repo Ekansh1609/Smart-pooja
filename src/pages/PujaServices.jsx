@@ -11,24 +11,36 @@ import { cn } from '../lib/utils';
 import { Link } from 'react-router-dom';
 import { PUJAS_DATA, getLocalizedPujasData } from '../lib/pujaData';
 import { useLanguage } from '../contexts/LanguageContext';
-
-// Keep CATEGORIES based on static data since categories might also need to be translated later
-const CATEGORIES = ['All', ...Array.from(new Set(PUJAS_DATA.map((puja) => puja.category)))];
+import { PUJA_CATEGORY_LABELS_HI } from '../lib/pujaDataTranslations';
 
 export default function PujaServices() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const { language } = useLanguage();
 
-  const localizedPujasData = getLocalizedPujasData(language);
+  const localizedPujasData = useMemo(() => getLocalizedPujasData(language), [language]);
+  const categories = [
+    { value: null, label: language === 'hi' ? 'सभी' : 'All' },
+    ...Array.from(new Set(PUJAS_DATA.map((puja) => puja.category))).map((category) => ({
+      value: category,
+      label: language === 'hi' ? (PUJA_CATEGORY_LABELS_HI[category] ?? category) : category,
+    })),
+  ];
 
   const filteredPujas = useMemo(() => {
+    const matchingPujaIds =
+      selectedCategory === null
+        ? null
+        : new Set(
+            PUJAS_DATA.filter((puja) => puja.category === selectedCategory).map((puja) => puja.id)
+          );
+
     return localizedPujasData.filter((puja) => {
       const matchesSearch = puja.name.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' || puja.category === selectedCategory;
+      const matchesCategory = matchingPujaIds === null || matchingPujaIds.has(puja.id);
       return matchesSearch && matchesCategory;
     });
-  }, [searchTerm, selectedCategory]);
+  }, [localizedPujasData, searchTerm, selectedCategory]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -51,18 +63,18 @@ export default function PujaServices() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-2">
-            {CATEGORIES.map((category) => (
+            {categories.map((category) => (
               <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
+                key={category.value ?? 'all'}
+                onClick={() => setSelectedCategory(category.value)}
                 className={cn(
                   'px-4 py-2 rounded-full text-sm font-medium transition-all border',
-                  selectedCategory === category
+                  selectedCategory === category.value
                     ? 'bg-primary text-primary-foreground border-primary shadow-md'
                     : 'bg-white text-muted-foreground border-stone-200 hover:border-primary/50 hover:text-primary'
                 )}
               >
-                {category}
+                {category.label}
               </button>
             ))}
           </div>
