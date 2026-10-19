@@ -20,6 +20,8 @@ import {
   MoreHorizontal,
 } from 'lucide-react';
 import astrologyHero from '../assets/generated_images/vedic_astrology_celestial_map.png';
+import { getLocalizedAstrologyCategory } from '../lib/astrologyTranslations';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export const ASTROLOGY_CATEGORIES = [
   {
@@ -108,6 +110,8 @@ function Wallet({ className }) {
   return <Badge className={className}>₹</Badge>;
 }
 export default function Astrology() {
+  const { language } = useLanguage();
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -147,27 +151,35 @@ export default function Astrology() {
           subtitle="Seek Guidance for Every Aspect of Life"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-          {ASTROLOGY_CATEGORIES.map((cat) => (
-            <Link key={cat.id} to={`/astrology/${cat.id}`}>
-              <Card className="group hover:shadow-xl transition-all duration-300 border-stone-200 cursor-pointer text-center hover:-translate-y-1 overflow-hidden">
-                <div className="h-32 overflow-hidden relative">
-                  <img
-                    src={cat.image}
-                    alt={cat.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
-                </div>
-                <CardHeader className="p-4">
-                  <CardTitle className="font-display text-lg">{cat.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="p-4 pt-0">
-                  <p className="text-xs text-muted-foreground mb-3 line-clamp-2">{cat.shortDesc}</p>
-                  <p className="font-bold text-secondary text-sm">Starts at {cat.price}</p>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
+          {ASTROLOGY_CATEGORIES.map((cat) => {
+            const localizedCategory = getLocalizedAstrologyCategory(cat, language);
+
+            return (
+              <Link key={cat.id} to={`/astrology/${cat.id}`}>
+                <Card className="group hover:shadow-xl transition-all duration-300 border-stone-200 cursor-pointer text-center hover:-translate-y-1 overflow-hidden">
+                  <div className="h-32 overflow-hidden relative">
+                    <img
+                      src={cat.image}
+                      alt={localizedCategory.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
+                  </div>
+                  <CardHeader className="p-4">
+                    <CardTitle className="font-display text-lg">
+                      {localizedCategory.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-4 pt-0">
+                    <p className="text-xs text-muted-foreground mb-3 line-clamp-2">
+                      {localizedCategory.shortDesc}
+                    </p>
+                    <p className="font-bold text-secondary text-sm">Starts at {cat.price}</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            );
+          })}
         </div>
       </section>
 
