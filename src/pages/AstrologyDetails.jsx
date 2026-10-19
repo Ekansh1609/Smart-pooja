@@ -18,11 +18,16 @@ import { Clock, Phone, Mail, User, Calendar, Star, ArrowLeft, ShieldCheck } from
 import { useState } from 'react';
 import { ASTROLOGY_CATEGORIES } from './Astrology';
 import astrologyBg from '../assets/generated_images/vedic_astrology_celestial_map.png';
+import { getLocalizedAstrologyCategory } from '../lib/astrologyTranslations';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function AstrologyDetails() {
   const params = useParams();
   const categoryId = params.id;
-  const category = ASTROLOGY_CATEGORIES.find((c) => c.id === categoryId) || ASTROLOGY_CATEGORIES[0];
+  const { language } = useLanguage();
+  const baseCategory =
+    ASTROLOGY_CATEGORIES.find((c) => c.id === categoryId) || ASTROLOGY_CATEGORIES[0];
+  const category = getLocalizedAstrologyCategory(baseCategory, language);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -91,11 +96,8 @@ export default function AstrologyDetails() {
               <TabsContent value="description" className="py-6 space-y-4">
                 <h3 className="text-2xl font-display font-bold">About this Consultation</h3>
                 <p className="text-stone-700 leading-relaxed text-lg">
-                  This session is designed to provide deep insights into your life using Vedic
-                  astrological principles. Our expert astrologers analyze your birth chart (Kundali)
-                  to provide accurate predictions and effective remedies. Whether you are facing
-                  challenges or looking for growth, this consultation will provide the clarity you
-                  need.
+                  {category.detailDescription ||
+                    'This session is designed to provide deep insights into your life using Vedic astrological principles. Our expert astrologers analyze your birth chart (Kundali) to provide accurate predictions and effective remedies. Whether you are facing challenges or looking for growth, this consultation will provide the clarity you need.'}
                 </p>
                 <div className="bg-secondary/5 p-6 rounded-2xl border border-secondary/10 flex items-start gap-4">
                   <ShieldCheck className="text-secondary shrink-0" size={32} />
