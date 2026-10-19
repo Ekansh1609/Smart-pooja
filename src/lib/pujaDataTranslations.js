@@ -1,3 +1,22 @@
+export const PUJA_CATEGORY_LABELS_HI = {
+  'Child Rituals & Sanskar': 'बाल अनुष्ठान एवं संस्कार',
+  'Protection & Strength': 'सुरक्षा और शक्ति',
+  'Property & Construction': 'संपत्ति और निर्माण',
+  'Marriage & Relationships': 'विवाह और रिश्ते',
+  'Afterlife & Rituals': 'परलोक और अनुष्ठान',
+  'Astrology & Dosha Remedies': 'ज्योतिष और दोष निवारण उपाय',
+  'Advanced Rituals & Homa': 'उन्नत अनुष्ठान एवं होम',
+  'Health & Protection': 'स्वास्थ्य सुरक्षा',
+  'Festivals & Deities': 'त्योहार और देवी-देवता',
+  'Business & Prosperity': 'व्यापार और समृद्धि',
+  'Education & Knowledge': 'शिक्षा और ज्ञान',
+  'Protection & Prosperity': 'सुरक्षा और समृद्धि',
+  'Charity & Ritual Completion': 'दान और अनुष्ठान-पूर्णता',
+  'Ancestral Rituals': 'पूर्वजों से जुड़े अनुष्ठान',
+  'Family & Progeny': 'परिवार और संतान',
+  'Home & Prosperity': 'घर और समृद्धि',
+  'Ancestor Rituals': 'पूर्वज संबंधी अनुष्ठान',
+};
 export const PUJAS_DATA_HI = {
   1: {
     name: 'अन्नप्राशन पूजा (अन्नप्राशन संस्कार)',
@@ -1162,7 +1181,7 @@ export const PUJAS_DATA_HI = {
   16: {
     name: 'कार्यालय उद्घाटन पूजा (ऑफिस ओपनिंग पूजा)',
     category: 'व्यापार और समृद्धि',
-    image: 'https://placehold.co/600x400?text=Office+Opening+Puja',
+    ////image: 'https://placehold.co/600x400?text=Office+Opening+Puja',
     shortDesc:
       'समृद्धि को आमंत्रित करने, वास्तु दोषों को दूर करने और व्यावसायिक सफलता सुनिश्चित करने के लिए एक पवित्र कार्यालय उद्घाटन अनुष्ठान।',
     fullDesc:
@@ -1276,7 +1295,7 @@ export const PUJAS_DATA_HI = {
   17: {
     name: 'सरस्वती पूजा',
     category: 'शिक्षा और ज्ञान',
-    image: 'https://placehold.co/600x400?text=Saraswati+Puja',
+    //image: 'https://placehold.co/600x400?text=Saraswati+Puja',
     shortDesc:
       'बुद्धिमत्ता, रचनात्मकता, शैक्षणिक सफलता और बौद्धिक विकास के लिए देवी सरस्वती का आह्वान करने वाली एक पवित्र पूजा।',
     fullDesc:
@@ -1401,7 +1420,7 @@ export const PUJAS_DATA_HI = {
     id: 18,
     name: 'वैदिक विवाह पूजा',
     category: 'विवाह और रिश्ते',
-    image: 'https://placehold.co/600x400?text=Vedic+Marriage+Puja',
+    //image: 'https://placehold.co/600x400?text=Vedic+Marriage+Puja',
     shortDesc:
       'एक पवित्र वैदिक विवाह समारोह जो दिव्य अनुष्ठानों, आशीर्वादों और आजीवन प्रतिज्ञाओं के माध्यम से दो आत्माओं को जोड़ता है।',
     fullDesc:
@@ -1524,7 +1543,7 @@ export const PUJAS_DATA_HI = {
     id: 19,
     name: 'श्री लक्ष्मी नृसिंह होमम्',
     category: 'सुरक्षा और समृद्धि',
-    image: 'https://placehold.co/600x400?text=Lakshmi+Narasimha+Homam',
+    //image: 'https://placehold.co/600x400?text=Lakshmi+Narasimha+Homam',
     shortDesc:
       'दिव्य सुरक्षा, समृद्धि और बाधाओं को दूर करने के लिए भगवान नृसिंह और देवी लक्ष्मी का आह्वान करने वाला एक शक्तिशाली होम।',
     fullDesc:
@@ -1649,7 +1668,7 @@ export const PUJAS_DATA_HI = {
     id: 20,
     name: 'निष्क्रमण संस्कार',
     category: 'बाल अनुष्ठान और संस्कार',
-    image: 'https://placehold.co/600x400?text=Nishkramana+Sanskar',
+    //image: 'https://placehold.co/600x400?text=Nishkramana+Sanskar',
     shortDesc:
       'बच्चे को प्रकृति और पांच ब्रह्मांडीय तत्वों से परिचित कराने वाला पहला पवित्र गृह-बहिर्गमन समारोह।',
     fullDesc:
@@ -1765,7 +1784,7 @@ export const PUJAS_DATA_HI = {
     id: 21,
     name: 'श्री एकादशी व्रत उद्यापन',
     category: 'त्योहार और देवता',
-    image: 'https://placehold.co/600x400?text=Ekadashi+Vrat+Udyapan',
+    //image: 'https://placehold.co/600x400?text=Ekadashi+Vrat+Udyapan',
     shortDesc:
       'आध्यात्मिक पूर्णता और दिव्य आशीर्वाद के लिए भगवान विष्णु को समर्पित एकादशी व्रत चक्र का पवित्र समापन समारोह।',
     fullDesc:
@@ -1881,7 +1900,7 @@ export const PUJAS_DATA_HI = {
     id: 22,
     name: 'ब्राह्मण भोजन और दान',
     category: 'दान और अनुष्ठान पूर्णता',
-    image: 'https://placehold.co/600x400?text=Brahmin+Bhojan+%26+Daan',
+    //image: 'https://placehold.co/600x400?text=Brahmin+Bhojan+%26+Daan',
     shortDesc:
       'वैदिक अनुष्ठानों को पूर्ण करने और स्थायी आध्यात्मिक पुण्य अर्जित करने के लिए ब्राह्मणों को भोजन कराने और दान देने का एक पवित्र अनुष्ठान।',
     fullDesc:
@@ -2001,7 +2020,7 @@ export const PUJAS_DATA_HI = {
     id: 23,
     name: 'पितृ पक्ष श्राद्ध अनुष्ठान',
     category: 'पितृ अनुष्ठान',
-    image: 'https://placehold.co/600x400?text=Pitru+Paksha+Shradh',
+    //image: 'https://placehold.co/600x400?text=Pitru+Paksha+Shradh',
     shortDesc:
       'पितृ पक्ष के दौरान दिवंगत आत्माओं के सम्मान, उनका आशीर्वाद प्राप्त करने और पितृ दोष निवारण के लिए किया जाने वाला एक पवित्र अनुष्ठान।',
     fullDesc:
@@ -2141,7 +2160,7 @@ export const PUJAS_DATA_HI = {
     id: 24,
     name: 'अखंड रामायण पाठ',
     category: 'त्योहार और देवता',
-    image: 'https://placehold.co/600x400?text=Akhand+Ramayan+Path',
+    //image: 'https://placehold.co/600x400?text=Akhand+Ramayan+Path',
     shortDesc:
       'भगवान राम का आशीर्वाद, शांति, समृद्धि और आध्यात्मिक सद्भाव प्राप्त करने के लिए श्रीरामचरितमानस का 24 घंटे का निरंतर पाठ।',
     fullDesc:
@@ -2268,7 +2287,7 @@ export const PUJAS_DATA_HI = {
     id: 25,
     name: 'पुत्रकामेष्टि होमम्',
     category: 'परिवार और संतान',
-    image: 'https://placehold.co/600x400?text=Putrakameshti+Homam',
+    //image: 'https://placehold.co/600x400?text=Putrakameshti+Homam',
     shortDesc:
       'स्वस्थ, सदाचारी और समृद्ध संतान के लिए दिव्य आशीर्वाद प्राप्त करने हेतु किया जाने वाला एक पवित्र वैदिक अग्नि अनुष्ठान।',
     fullDesc:
@@ -2391,7 +2410,7 @@ export const PUJAS_DATA_HI = {
     id: 26,
     name: 'नक्षत्र शांति पूजा',
     category: 'ज्योतिष और दोष निवारण',
-    image: 'https://placehold.co/600x400?text=Nakshatra+Shanti+Puja',
+    //image: 'https://placehold.co/600x400?text=Nakshatra+Shanti+Puja',
     shortDesc:
       'जन्म नक्षत्र की ऊर्जाओं को संतुलित करने और ग्रहीय बाधाओं को दूर करने के लिए किया जाने वाला एक पवित्र वैदिक अनुष्ठान।',
     fullDesc:
@@ -2514,7 +2533,7 @@ export const PUJAS_DATA_HI = {
     id: 27,
     name: 'उमा महेश्वरी पूजा',
     category: 'विवाह और रिश्ते',
-    image: 'https://placehold.co/600x400?text=Uma+Maheshwari+Puja',
+    //image: 'https://placehold.co/600x400?text=Uma+Maheshwari+Puja',
     shortDesc:
       'वैवाहिक सद्भाव, प्रेम, समृद्धि और पारिवारिक कल्याण के लिए भगवान शिव और माता पार्वती को समर्पित एक पवित्र वैदिक अनुष्ठान।',
     fullDesc:
@@ -2638,7 +2657,7 @@ export const PUJAS_DATA_HI = {
     id: 28,
     name: 'कर्णवेध संस्कार',
     category: 'बाल अनुष्ठान और संस्कार',
-    image: 'https://placehold.co/600x400?text=Karnavedha+Sanskar',
+    //image: 'https://placehold.co/600x400?text=Karnavedha+Sanskar',
     shortDesc:
       'बच्चे के आध्यात्मिक और शारीरिक विकास में एक महत्वपूर्ण मील के पत्थर का प्रतीक एक पवित्र कान-भेदन समारोह।',
     fullDesc:
@@ -2759,7 +2778,7 @@ export const PUJAS_DATA_HI = {
     id: 29,
     name: 'दस महाविद्या पूजा',
     category: 'त्योहार और देवता',
-    image: 'https://placehold.co/600x400?text=Das+Mahavidya+Puja',
+    //image: 'https://placehold.co/600x400?text=Das+Mahavidya+Puja',
     shortDesc:
       'दिव्य ज्ञान, आध्यात्मिक रूपांतरण और सुरक्षा प्राप्त करने के लिए दस महाविद्याओं की एक पवित्र तांत्रिक पूजा।',
     fullDesc:
@@ -2884,7 +2903,7 @@ export const PUJAS_DATA_HI = {
     id: 30,
     name: 'उदक शांति पूजा',
     category: 'घर और समृद्धि',
-    image: 'https://placehold.co/600x400?text=Udaka+Shanti+Puja',
+    //image: 'https://placehold.co/600x400?text=Udaka+Shanti+Puja',
     shortDesc:
       'एक पवित्र वैदिक शुद्धिकरण अनुष्ठान जो शांति का आह्वान करता है, नकारात्मक ऊर्जाओं को दूर करता है और अभिमंत्रित जल के माध्यम से घरों को पवित्र करता है।',
     fullDesc:
@@ -3008,7 +3027,7 @@ export const PUJAS_DATA_HI = {
     id: 31,
     name: 'गोवर्धन पूजा',
     category: 'त्योहार और देवता',
-    image: 'https://placehold.co/600x400?text=Govardhan+Puja',
+    //image: 'https://placehold.co/600x400?text=Govardhan+Puja',
     shortDesc:
       'भगवान कृष्ण को समर्पित एक पवित्र त्योहार, जो गोवर्धन पर्वत की पूजा करने और प्रकृति, प्रचुरता व दिव्य सुरक्षा के प्रति कृतज्ञता व्यक्त करने का प्रतीक है।',
     fullDesc:
@@ -3151,7 +3170,7 @@ export const PUJAS_DATA_HI = {
     id: 32,
     name: 'सुंदरकांड पाठ',
     category: 'त्योहार और देवता',
-    image: 'https://placehold.co/600x400?text=Sundarkand+Path',
+    //image: 'https://placehold.co/600x400?text=Sundarkand+Path',
     shortDesc:
       'शक्ति, सुरक्षा, शांति और सफलता के लिए भगवान हनुमान का आशीर्वाद प्राप्त करने हेतु रामायण के सुंदरकांड का एक पवित्र पाठ।',
     fullDesc:
@@ -3272,7 +3291,7 @@ export const PUJAS_DATA_HI = {
     id: 33,
     name: 'त्रिपिंडी श्राद्ध पूजा',
     category: 'पितृ अनुष्ठान',
-    image: 'https://placehold.co/600x400?text=Tripindi+Shradh+Puja',
+    //image: 'https://placehold.co/600x400?text=Tripindi+Shradh+Puja',
     shortDesc:
       'पितरों को शांति प्रदान करने, पितृ दोष दूर करने और आने वाली पीढ़ियों के लिए सद्भाव, समृद्धि व आशीर्वाद प्राप्त करने के लिए किया जाने वाला एक पवित्र वैदिक अनुष्ठान।',
     fullDesc:
@@ -3396,7 +3415,7 @@ export const PUJAS_DATA_HI = {
     id: 34,
     name: 'कृष्ण जन्माष्टमी पूजा',
     category: 'त्योहार और देवता',
-    image: 'https://placehold.co/600x400?text=Krishna+Janmashtami',
+    //image: 'https://placehold.co/600x400?text=Krishna+Janmashtami',
     shortDesc:
       'शांति, समृद्धि और आध्यात्मिक उन्नति के लिए पवित्र जन्माष्टमी पूजा, आधी रात की आराधना और भक्तिमय भोग के साथ भगवान कृष्ण के दिव्य जन्मोत्सव का आनंद लें।',
     fullDesc:
