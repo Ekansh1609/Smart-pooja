@@ -117,12 +117,12 @@ export default function Astrology() {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="relative h-[500px] flex items-center overflow-hidden">
+      <div className="relative flex min-h-[calc(100svh-5rem)] w-full items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src={astrologyHero} alt="Astrology" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
         </div>
-        <div className="container mx-auto px-4 relative z-10 text-white">
+        <div className="page-container relative z-10 flex flex-col justify-center py-12 text-white sm:py-16">
           <div className="max-w-2xl space-y-6">
             <Badge className="bg-primary/20 text-primary-foreground border-primary/40 px-3 py-1 text-sm font-medium">
               Vedic Astrology Guidance
@@ -142,10 +142,11 @@ export default function Astrology() {
             </Button>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background to-transparent" />
       </div>
 
       {/* Categories Section */}
-      <section className="py-20 container mx-auto px-4">
+      <section className="page-container py-20">
         <SectionHeader
           title="Consultation Categories"
           subtitle="Seek Guidance for Every Aspect of Life"
@@ -185,7 +186,7 @@ export default function Astrology() {
 
       {/* Why Choose Section */}
       <section className="py-20 bg-stone-100 pattern-mandala border-y border-stone-200 overflow-hidden">
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="page-container relative z-10 text-center">
           <SectionHeader title="Why DivyaPooja Astrology?" subtitle="The Celestial Difference" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
             {[

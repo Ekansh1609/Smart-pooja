@@ -46,7 +46,7 @@ export default function PujaServices() {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <main className="container mx-auto px-4 py-12">
+      <main className="page-container py-12">
         <SectionHeader title="Our Puja Services" subtitle="Divine Rituals for Every Occasion" />
 
         {/* Search and Filter Section */}

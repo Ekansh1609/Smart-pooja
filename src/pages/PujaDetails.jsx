@@ -114,7 +114,7 @@ export default function PujaDetails() {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="page-container py-8">
         {/* Breadcrumb */}
         <Link to="/poojas">
           <div className="inline-flex items-center gap-2 text-primary hover:underline mb-6 font-medium">
@@ -321,6 +321,7 @@ export default function PujaDetails() {
             >
               Reviews
             </TabsTrigger>
+            {/*
             <TabsTrigger
               value="gallery"
               className="data-[state=active]:bg-white data-[state=active]:text-primary font-semibold px-6"
@@ -335,6 +336,7 @@ export default function PujaDetails() {
                 FAQ
               </TabsTrigger>
             )}
+            */}
           </TabsList>
 
           {/* Description Tab (Dynamically Populated) */}
@@ -586,8 +588,9 @@ export default function PujaDetails() {
             </Card>
           </TabsContent>
 
-          {/* Gallery Tab */}
-          <TabsContent value="gallery" className="animate-in fade-in duration-300">
+          {false && (
+            <>
+              <TabsContent value="gallery" className="animate-in fade-in duration-300">
             <Card>
               <CardContent className="p-6 md:p-8">
                 <h3 className="text-2xl font-display font-bold mb-6">Photo Gallery</h3>
@@ -616,31 +619,32 @@ export default function PujaDetails() {
                 </div>
               </CardContent>
             </Card>
-          </TabsContent>
+              </TabsContent>
 
-          {/* FAQ Tab (Dynamically Mapped) */}
-          {puja.faqs && puja.faqs.length > 0 && (
-            <TabsContent value="faq" className="animate-in fade-in duration-300">
-              <Card>
-                <CardContent className="p-6 md:p-8">
-                  <h3 className="text-2xl font-display font-bold mb-6">
-                    Frequently Asked Questions
-                  </h3>
-                  <Accordion type="single" collapsible className="w-full">
-                    {puja.faqs.map((faq, i) => (
-                      <AccordionItem key={i} value={`faq-${i}`} className="border-stone-200">
-                        <AccordionTrigger className="text-left font-semibold hover:text-primary transition-colors text-lg">
-                          {faq.question}
-                        </AccordionTrigger>
-                        <AccordionContent className="text-stone-600 leading-relaxed text-base">
-                          {faq.answer}
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </CardContent>
-              </Card>
-            </TabsContent>
+              {puja.faqs && puja.faqs.length > 0 && (
+                <TabsContent value="faq" className="animate-in fade-in duration-300">
+                  <Card>
+                    <CardContent className="p-6 md:p-8">
+                      <h3 className="text-2xl font-display font-bold mb-6">
+                        Frequently Asked Questions
+                      </h3>
+                      <Accordion type="single" collapsible className="w-full">
+                        {puja.faqs.map((faq, i) => (
+                          <AccordionItem key={i} value={`faq-${i}`} className="border-stone-200">
+                            <AccordionTrigger className="text-left font-semibold hover:text-primary transition-colors text-lg">
+                              {faq.question}
+                            </AccordionTrigger>
+                            <AccordionContent className="text-stone-600 leading-relaxed text-base">
+                              {faq.answer}
+                            </AccordionContent>
+                          </AccordionItem>
+                        ))}
+                      </Accordion>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+              )}
+            </>
           )}
         </Tabs>
       </main>
