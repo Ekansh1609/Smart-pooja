@@ -10,6 +10,13 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { language, toggleLanguage } = useLanguage();
 
+  const handleNavigationClick = (href) => {
+    setIsOpen(false);
+    if (location.pathname === href) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
+  };
+
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/poojas', label: 'Pooja Services' },
@@ -35,7 +42,7 @@ export function Navbar() {
         {/* Desktop Nav */}
         <div className="hidden items-center gap-6 lg:flex xl:gap-8">
           {navLinks.map((link) => (
-            <Link key={link.href} to={link.href}>
+            <Link key={link.href} to={link.href} onClick={() => handleNavigationClick(link.href)}>
               <div
                 className={cn(
                   'text-lg font-medium transition-colors hover:text-primary relative group',
@@ -91,7 +98,7 @@ export function Navbar() {
       {isOpen && (
         <div className="absolute w-full flex flex-col gap-4 border-b bg-background p-4 shadow-lg animate-in slide-in-from-top-5 lg:hidden">
           {navLinks.map((link) => (
-            <Link key={link.href} to={link.href}>
+            <Link key={link.href} to={link.href} onClick={() => handleNavigationClick(link.href)}>
               <div
                 className={cn(
                   'text-lg py-2 px-4 rounded-md transition-colors',

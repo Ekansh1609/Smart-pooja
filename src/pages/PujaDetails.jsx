@@ -32,10 +32,13 @@ import {
   ListOrdered,
   BookOpen,
 } from 'lucide-react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { cn } from '../lib/utils';
 import { PUJAS_DATA, getLocalizedPujasData } from '../lib/pujaData';
 import { useLanguage } from '../contexts/LanguageContext';
+import { sendFormEmail } from '../lib/emailjs';
+import { INDIAN_MOBILE_PATTERN } from '../lib/formValidation';
+import { SubmissionSuccessModal } from '../components/forms/SubmissionSuccessModal';
 
 const GALLERY_IMAGES = [
   'https://images.unsplash.com/photo-1604928146023-8a68da68f11f?w=400',
@@ -98,11 +101,53 @@ export default function PujaDetails() {
 
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const [successModalOpen, setSuccessModalOpen] = useState(false);
+  const submissionInProgress = useRef(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Booking submitted:', { puja: puja.name, ...formData });
-    alert('Booking request submitted! We will contact you shortly.');
+    if (submissionInProgress.current) return;
+
+    submissionInProgress.current = true;
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      await sendFormEmail('pooja', {
+        submission_type: 'Pooja Booking',
+        service_name: puja.name,
+        service_id: String(puja.id),
+        customer_name: formData.name,
+        customer_email: formData.email || '',
+        customer_phone: formData.phone,
+        preferred_date: formData.date,
+        preferred_time: formData.time,
+        venue_type: formData.venue,
+        address: formData.address,
+        additional_details: formData.notes,
+      });
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        date: '',
+        time: '',
+        venue: '',
+        address: '',
+        notes: '',
+      });
+      setSuccessModalOpen(true);
+    } catch (error) {
+      console.error('Pooja booking email failed:', error);
+      setSubmitError(
+        'We could not send your booking request. Please try again in a moment.'
+      );
+    } finally {
+      submissionInProgress.current = false;
+      setIsSubmitting(false);
+    }
   };
 
   const openLightbox = (index) => {
@@ -201,6 +246,10 @@ export default function PujaDetails() {
                         <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                         <Input
                           id="phone"
+                          type="tel"
+                          inputMode="tel"
+                          pattern={INDIAN_MOBILE_PATTERN}
+                          title="Enter a valid 10-digit Indian mobile number, optionally with +91"
                           placeholder="+91 98765 43210"
                           className="pl-9"
                           value={formData.phone}
@@ -218,6 +267,7 @@ export default function PujaDetails() {
                       <Input
                         id="email"
                         type="email"
+                        title="Enter a valid email address"
                         placeholder="your@email.com"
                         className="pl-9"
                         value={formData.email}
@@ -291,11 +341,17 @@ export default function PujaDetails() {
                     />
                   </div>
 
+                  {submitError && (
+                    <p className="text-sm text-destructive" role="alert">
+                      {submitError}
+                    </p>
+                  )}
                   <Button
                     type="submit"
+                    disabled={isSubmitting}
                     className="w-full bg-secondary hover:bg-secondary/90 text-white h-12 text-lg font-semibold shadow-lg"
                   >
-                    Request Booking
+                    {isSubmitting ? 'Sending Request...' : 'Request Booking'}
                   </Button>
                   <p className="text-xs text-center text-muted-foreground">
                     Our team will contact you to confirm availability and details.
@@ -688,6 +744,7 @@ export default function PujaDetails() {
       </Dialog>
 
       <Footer />
+      <SubmissionSuccessModal open={successModalOpen} onOpenChange={setSuccessModalOpen} />
     </div>
   );
 }

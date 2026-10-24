@@ -137,6 +137,11 @@ export default function Astrology() {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 rounded-full shadow-lg"
+              onClick={() =>
+                document
+                  .getElementById('consultation-categories')
+                  ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }
             >
               Explore Sessions
             </Button>
@@ -146,37 +151,41 @@ export default function Astrology() {
       </div>
 
       {/* Categories Section */}
-      <section className="page-container py-20">
+      <section id="consultation-categories" className="page-container scroll-mt-20 py-20">
         <SectionHeader
           title="Consultation Categories"
           subtitle="Seek Guidance for Every Aspect of Life"
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {ASTROLOGY_CATEGORIES.map((cat) => {
             const localizedCategory = getLocalizedAstrologyCategory(cat, language);
 
             return (
-              <Link key={cat.id} to={`/astrology/${cat.id}`}>
-                <Card className="group hover:shadow-xl transition-all duration-300 border-stone-200 cursor-pointer text-center hover:-translate-y-1 overflow-hidden">
-                  <div className="h-32 overflow-hidden relative">
+              <Link key={cat.id} to={`/astrology/${cat.id}`} className="block h-full">
+                <Card className="group flex h-full flex-col overflow-hidden border-stone-200 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  <div className="relative h-48 overflow-hidden">
                     <img
                       src={cat.image}
                       alt={localizedCategory.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
                   </div>
-                  <CardHeader className="p-4">
-                    <CardTitle className="font-display text-lg">
+                  <CardHeader className="p-4 pb-2">
+                    <CardTitle className="text-xl font-display font-bold transition-colors group-hover:text-primary">
                       {localizedCategory.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="p-4 pt-0">
-                    <p className="text-xs text-muted-foreground mb-3 line-clamp-2">
+                  <CardContent className="flex-grow p-4 pt-0">
+                    <p className="mb-4 line-clamp-2 text-sm text-muted-foreground">
                       {localizedCategory.shortDesc}
                     </p>
                     <p className="font-bold text-secondary text-sm">Starts at {cat.price}</p>
                   </CardContent>
+                  <div className="mt-auto p-4 pt-0">
+                    <div className="inline-flex min-h-9 w-full items-center justify-center gap-2 whitespace-nowrap rounded-md border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white">
+                      View Details
+                    </div>
+                  </div>
                 </Card>
               </Link>
             );
