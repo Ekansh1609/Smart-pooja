@@ -136,7 +136,8 @@ export default function Astrology() {
             </p>
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 rounded-full shadow-lg"
+              variant="outline"
+              className="border border-white/30 bg-transparent px-8 text-lg text-white shadow-lg backdrop-blur-sm transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
               onClick={() =>
                 document
                   .getElementById('consultation-categories')

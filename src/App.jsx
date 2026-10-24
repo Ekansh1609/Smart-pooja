@@ -9,6 +9,7 @@ import Astrology from './pages/Astrology';
 import AstrologyDetails from './pages/AstrologyDetails';
 import PujaDetails from './pages/PujaDetails';
 import Register from './pages/Register';
+import Founder from './pages/Founder';
 import NotFound from './pages/not-found';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/astrology" element={<Astrology />} />
           <Route path="/astrology/:id" element={<AstrologyDetails />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/founder" element={<Founder />} />
 
           <Route element={<NotFound />} />
         </Route>

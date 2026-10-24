@@ -250,7 +250,7 @@ export default function PujaDetails() {
                           inputMode="tel"
                           pattern={INDIAN_MOBILE_PATTERN}
                           title="Enter a valid 10-digit Indian mobile number, optionally with +91"
-                          placeholder="+91 98765 43210"
+                          placeholder="+919005448001"
                           className="pl-9"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
