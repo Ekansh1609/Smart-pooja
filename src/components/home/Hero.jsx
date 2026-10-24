@@ -45,15 +45,18 @@ export function Hero() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Link to="/poojas">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 text-lg px-8 h-14 rounded-full backdrop-blur-sm"
-              >
-                Explore Services
-              </Button>
-            </Link>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white/30 text-white hover:bg-white/10 text-lg px-8 h-14 rounded-full backdrop-blur-sm"
+              onClick={() =>
+                document
+                  .getElementById('our-divine-services')
+                  ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }
+            >
+              Explore Services
+            </Button>
           </div>
         </div>
       </div>

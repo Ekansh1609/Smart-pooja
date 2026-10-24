@@ -15,11 +15,14 @@ import {
 import { Badge } from '../components/ui/badge';
 import { useParams, Link } from 'react-router-dom';
 import { Clock, Phone, Mail, User, Calendar, Star, ArrowLeft, ShieldCheck } from 'lucide-react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { ASTROLOGY_CATEGORIES } from './Astrology';
 import astrologyBg from '../assets/generated_images/vedic_astrology_celestial_map.png';
 import { getLocalizedAstrologyCategory } from '../lib/astrologyTranslations';
 import { useLanguage } from '../contexts/LanguageContext';
+import { sendFormEmail } from '../lib/emailjs';
+import { INDIAN_MOBILE_PATTERN } from '../lib/formValidation';
+import { SubmissionSuccessModal } from '../components/forms/SubmissionSuccessModal';
 
 export default function AstrologyDetails() {
   const params = useParams();
@@ -37,11 +40,49 @@ export default function AstrologyDetails() {
     date: '',
     queries: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const [successModalOpen, setSuccessModalOpen] = useState(false);
+  const submissionInProgress = useRef(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Consultation booked:', formData);
-    alert('Consultation request submitted successfully!');
+    if (submissionInProgress.current) return;
+
+    submissionInProgress.current = true;
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      await sendFormEmail('astrology', {
+        submission_type: 'Astrology Inquiry',
+        customer_name: formData.name,
+        customer_email: formData.email,
+        customer_phone: formData.phone,
+        service_name: category.title,
+        service_id: baseCategory.id,
+        preferred_date: formData.date,
+        preferred_time: formData.time,
+        queries: formData.queries,
+      });
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        time: '',
+        date: '',
+        queries: '',
+      });
+      setSuccessModalOpen(true);
+    } catch (error) {
+      console.error('Astrology inquiry email failed:', error);
+      setSubmitError(
+        'We could not send your consultation request. Please try again in a moment.'
+      );
+    } finally {
+      submissionInProgress.current = false;
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -167,41 +208,87 @@ export default function AstrologyDetails() {
                     <Label>Full Name</Label>
                     <div className="relative">
                       <User className="absolute left-3 top-3 text-muted-foreground" size={16} />
-                      <Input placeholder="Your Name" className="pl-10" required />
+                      <Input
+                        name="customer_name"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        placeholder="Your Name"
+                        className="pl-10"
+                        required
+                      />
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label>Email</Label>
-                      <Input type="email" placeholder="email@example.com" required />
+                      <Input
+                        name="customer_email"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        type="email"
+                        placeholder="email@example.com"
+                        title="Enter a valid email address"
+                        required
+                      />
                     </div>
                     <div className="space-y-2">
                       <Label>Phone</Label>
-                      <Input placeholder="+91 0000000000" required />
+                      <Input
+                        name="customer_phone"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        type="tel"
+                        inputMode="tel"
+                        pattern={INDIAN_MOBILE_PATTERN}
+                        title="Enter a valid 10-digit Indian mobile number, optionally with +91"
+                        placeholder="+91 0000000000"
+                        required
+                      />
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label>Preferred Date</Label>
-                      <Input type="date" required />
+                      <Input
+                        name="preferred_date"
+                        value={formData.date}
+                        onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                        type="date"
+                        required
+                      />
                     </div>
                     <div className="space-y-2">
                       <Label>Preferred Time</Label>
-                      <Input type="time" required />
+                      <Input
+                        name="preferred_time"
+                        value={formData.time}
+                        onChange={(e) => setFormData({ ...formData, time: e.target.value })}
+                        type="time"
+                        required
+                      />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <Label>Your Queries</Label>
                     <Textarea
+                      name="queries"
+                      value={formData.queries}
+                      onChange={(e) => setFormData({ ...formData, queries: e.target.value })}
                       placeholder="What would you like to ask the astrologer?"
                       className="min-h-[100px]"
                     />
                   </div>
+                  {submitError && (
+                    <p className="text-sm text-destructive" role="alert">
+                      {submitError}
+                    </p>
+                  )}
                   <Button
                     type="submit"
+                    disabled={isSubmitting}
                     className="w-full bg-secondary text-white hover:bg-secondary/90 h-12 text-lg font-bold shadow-lg mt-4"
                   >
-                    Book Consultation Now
+                    {isSubmitting ? 'Sending Request...' : 'Book Consultation Now'}
                   </Button>
                 </form>
               </CardContent>
@@ -211,6 +298,7 @@ export default function AstrologyDetails() {
       </main>
 
       <Footer />
+      <SubmissionSuccessModal open={successModalOpen} onOpenChange={setSuccessModalOpen} />
     </div>
   );
 }

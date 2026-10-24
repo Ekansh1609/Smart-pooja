@@ -84,7 +84,7 @@ export default function Home() {
       <Hero />
 
       {/* Services Section */}
-      <section className="page-container py-20">
+      <section id="our-divine-services" className="page-container scroll-mt-20 py-20">
         <SectionHeader title="Our Divine Services" subtitle="Authentic Vedic Rituals" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
