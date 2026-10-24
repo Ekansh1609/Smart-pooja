@@ -35,7 +35,7 @@ export default function Pandits() {
       <Navbar />
 
       <div className="bg-primary/5 py-12">
-        <div className="container mx-auto px-4">
+        <div className="page-container">
           <SectionHeader
             title="Find a Pandit"
             subtitle="Connect with Vedic Scholars"
@@ -90,7 +90,7 @@ export default function Pandits() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-12">
+      <div className="page-container py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredPandits.map((pandit) => (
             <Card

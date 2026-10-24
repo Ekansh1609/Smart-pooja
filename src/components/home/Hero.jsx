@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export function Hero() {
   return (
-    <div className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
+    <div className="relative flex min-h-[calc(100svh-5rem)] w-full items-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -17,7 +17,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center text-white">
+      <div className="page-container relative z-10 flex flex-col justify-center py-12 text-white sm:py-16">
         <div className="max-w-2xl space-y-6 animate-in slide-in-from-left-10 duration-700 fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 border border-primary/40 backdrop-blur-sm text-primary-foreground text-sm font-medium">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />

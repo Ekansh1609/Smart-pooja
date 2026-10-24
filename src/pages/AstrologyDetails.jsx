@@ -48,7 +48,7 @@ export default function AstrologyDetails() {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <main className="container mx-auto px-4 py-12">
+      <main className="page-container py-12">
         <Link to="/astrology">
           <div className="inline-flex items-center gap-2 text-primary hover:underline mb-8 font-medium">
             <ArrowLeft className="w-4 h-4" /> Back to Astrology
@@ -85,9 +85,11 @@ export default function AstrologyDetails() {
                 <TabsTrigger value="description" className="px-8 py-2">
                   Description
                 </TabsTrigger>
+                {/*
                 <TabsTrigger value="faqs" className="px-8 py-2">
                   FAQs
                 </TabsTrigger>
+                */}
                 <TabsTrigger value="reviews" className="px-8 py-2">
                   Reviews
                 </TabsTrigger>
@@ -111,24 +113,26 @@ export default function AstrologyDetails() {
                 </div>
               </TabsContent>
 
-              <TabsContent value="faqs" className="py-6">
-                <Accordion type="single" collapsible>
-                  <AccordionItem value="1">
-                    <AccordionTrigger>What details are required for the session?</AccordionTrigger>
-                    <AccordionContent>
-                      You will need to provide your Date of Birth, exact Time of Birth, and Place of
-                      Birth for accurate chart preparation.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="2">
-                    <AccordionTrigger>How long is the consultation call?</AccordionTrigger>
-                    <AccordionContent>
-                      A typical session lasts between 30 to 45 minutes depending on the complexity
-                      of your queries.
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              </TabsContent>
+              {false && (
+                <TabsContent value="faqs" className="py-6">
+                  <Accordion type="single" collapsible>
+                    <AccordionItem value="1">
+                      <AccordionTrigger>What details are required for the session?</AccordionTrigger>
+                      <AccordionContent>
+                        You will need to provide your Date of Birth, exact Time of Birth, and Place
+                        of Birth for accurate chart preparation.
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="2">
+                      <AccordionTrigger>How long is the consultation call?</AccordionTrigger>
+                      <AccordionContent>
+                        A typical session lasts between 30 to 45 minutes depending on the complexity
+                        of your queries.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </TabsContent>
+              )}
 
               <TabsContent value="reviews" className="py-6 space-y-6">
                 {[1, 2].map((i) => (

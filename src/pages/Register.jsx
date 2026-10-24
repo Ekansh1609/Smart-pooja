@@ -67,7 +67,7 @@ export default function Register() {
       <Navbar />
 
       <div className="py-12 bg-stone-50">
-        <div className="container mx-auto px-4">
+        <div className="page-container">
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
             {/* Left Sidebar Info */}
             <div className="md:col-span-2 space-y-6">

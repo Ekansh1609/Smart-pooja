@@ -84,7 +84,7 @@ export default function Home() {
       <Hero />
 
       {/* Services Section */}
-      <section className="py-20 container mx-auto px-4">
+      <section className="page-container py-20">
         <SectionHeader title="Our Divine Services" subtitle="Authentic Vedic Rituals" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -141,7 +141,7 @@ export default function Home() {
 
       {/* Featured Pandits Section */}
       <section className=" hidden py-20 bg-stone-100 pattern-mandala border-y border-stone-200 overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="page-container relative z-10">
           <SectionHeader title="Experienced Vedic Pandits" subtitle="Verified & Trusted" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -194,7 +194,7 @@ export default function Home() {
 
       {/* How it Works Section */}
       <section className="py-24 bg-white overflow-hidden">
-        <div className="container mx-auto px-4">
+        <div className="page-container">
           <SectionHeader title="How DivyaPooja Works" subtitle="Your Journey to Spiritual Peace" />
 
           <div className="relative mt-16">
@@ -253,7 +253,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 container mx-auto px-4">
+      <section className="page-container py-20">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2">
             <img
@@ -306,7 +306,7 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section className="py-20 bg-secondary/5">
-        <div className="container mx-auto px-4">
+        <div className="page-container">
           <SectionHeader title="What our devotees say" subtitle="Spiritual Experiences" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {TESTIMONIALS.map((testimonial, i) => (
@@ -336,25 +336,29 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 container mx-auto px-4 max-w-3xl">
-        <SectionHeader title="Frequently Asked Questions" subtitle="Clear Your Doubts" />
-        <Accordion type="single" collapsible className="w-full">
-          {FAQS.map((faq, i) => (
-            <AccordionItem key={i} value={`item-${i}`} className="border-stone-200">
-              <AccordionTrigger className="text-left font-bold text-lg hover:text-primary transition-colors">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-stone-600 leading-relaxed">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </section>
+      {/* <section className="py-20">
+        <div className="page-container">
+          <div className="mx-auto max-w-3xl">
+            <SectionHeader title="Frequently Asked Questions" subtitle="Clear Your Doubts" />
+            <Accordion type="single" collapsible className="w-full">
+              {FAQS.map((faq, i) => (
+                <AccordionItem key={i} value={`item-${i}`} className="border-stone-200">
+                  <AccordionTrigger className="text-left font-bold text-lg hover:text-primary transition-colors">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-stone-600 leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>*/}
 
       {/* CTA Section */}
       <section className=" hidden py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center space-y-6">
+        <div className="page-container space-y-6 text-center">
           <h2 className="text-4xl md:text-5xl font-display font-bold">Are you a Pandit?</h2>
           <p className="text-xl max-w-2xl mx-auto opacity-90">
             Join our growing network of Vedic scholars and reach devotees across the globe. Manage
