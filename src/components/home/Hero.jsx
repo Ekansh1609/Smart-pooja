@@ -48,7 +48,7 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 text-lg px-8 h-14 rounded-full backdrop-blur-sm"
+              className="border-white/30 bg-transparent text-white text-lg px-8 h-14 rounded-full backdrop-blur-sm transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
               onClick={() =>
                 document
                   .getElementById('our-divine-services')

@@ -120,7 +120,7 @@ export default function Home() {
                 <Link to={`/poojas/${pooja.id}`}>
                   <Button
                     variant="outline"
-                    className="w-full border-primary/20 hover:bg-primary/5 hover:border-primary text-primary group-hover:bg-primary group-hover:text-white transition-all"
+                    className="w-full border-primary/20 text-primary transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground"
                   >
                     Book Now
                   </Button>

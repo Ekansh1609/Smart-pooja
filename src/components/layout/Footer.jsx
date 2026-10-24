@@ -1,9 +1,9 @@
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export function Footer() {
+export function Footer({ className = 'mt-20' }) {
   return (
-    <footer className="bg-stone-900 text-stone-300 pt-16 pb-8 mt-20">
+    <footer className={`bg-stone-900 text-stone-300 pt-16 pb-8 ${className}`}>
       <div className="page-container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
@@ -53,7 +53,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/about">
+                <Link to="/founder">
                   <div className="hover:text-primary transition-colors">About Us</div>
                 </Link>
               </li>
@@ -107,11 +107,11 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>+91 98765 43210</span>
+                <span>+919005448001</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span className="min-w-0 break-words">namaste@divyapooja.com</span>
+                <span className="min-w-0 break-words">gurukulam13@gmail.com</span>
               </li>
             </ul>
           </div>

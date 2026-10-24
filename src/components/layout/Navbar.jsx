@@ -20,6 +20,7 @@ export function Navbar() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/poojas', label: 'Pooja Services' },
+    { href: '/founder', label: 'Founder' },
     /* { href: '/pandits', label: 'Find Pandit' }, */
     { href: '/astrology', label: 'Astrology' },
   ];
@@ -79,7 +80,7 @@ export function Navbar() {
             className="border-primary text-primary hover:bg-primary/10"
           >
             <Phone className="w-4 h-4 mr-2" />
-            +91 98765 43210
+            +919005448001
           </Button>
           <Link to="/register">
             <Button className="hidden bg-secondary hover:bg-secondary/90 text-white font-semibold shadow-md">
@@ -114,11 +115,11 @@ export function Navbar() {
           ))}
           <div className="h-px bg-border my-2" />
           <a
-            href="tel:+919876543210"
+            href="tel:+919005448001"
             className="flex items-center gap-3 rounded-md px-4 py-2 text-lg text-foreground transition-colors hover:bg-muted"
           >
             <Phone className="h-5 w-5 text-primary" />
-            +91 98765 43210
+            +919005448001
           </a>
           <div className="flex items-center gap-2 px-4 py-2">
             <Globe className="w-5 h-5 text-primary" />
