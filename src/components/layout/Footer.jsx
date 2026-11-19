@@ -13,7 +13,7 @@ export function Footer({ className = 'mt-20' }) {
                 ॐ
               </div>
               <span className="font-display text-2xl font-bold text-white tracking-wide">
-                Smart<span className="text-primary">Pooja</span>
+                Smart<span className="text-primary">Pujapath</span>
               </span>
             </div>
             <p className="text-sm leading-relaxed opacity-80">
