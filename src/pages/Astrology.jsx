@@ -27,80 +27,70 @@ export const ASTROLOGY_CATEGORIES = [
   {
     id: 'generic',
     title: 'Generic Consultation',
-    image:
-      'https://images.unsplash.com/photo-1532960401447-7dd05bef20b0?q=80&w=400&auto=format&fit=crop',
+    image:"/Founder-Page/rituals-tradition-image.jpeg",
     shortDesc: 'Complete life overview and future predictions.',
     price: '₹501',
   },
   {
     id: 'health',
     title: 'Health & Wellness',
-    image:
-      'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=400&auto=format&fit=crop',
+    image:"/Founder-Page/wisdom-guidance-image.jpeg",
     shortDesc: 'Insights into physical and mental well-being.',
     price: '₹701',
   },
   {
     id: 'career',
     title: 'Career & Business',
-    image:
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=400&auto=format&fit=crop',
+    image:"/Founder-Page/rituals-tradition-image.jpeg",
     shortDesc: 'Guidance for professional growth and success.',
     price: '₹801',
   },
   {
     id: 'love',
     title: 'Love & Relationships',
-    image:
-      'https://images.unsplash.com/photo-1518197146369-01159947588e?q=80&w=400&auto=format&fit=crop',
+    image:'/images/Udaka Shanti Puja.jpg',
     shortDesc: 'Advice for harmony in personal life.',
     price: '₹601',
   },
   {
     id: 'marriage',
     title: 'Marriage & Compatibility',
-    image:
-      'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=400&auto=format&fit=crop',
+    image:'/images/Krishna Janmashtami Puja.jpg',
     shortDesc: 'Matchmaking and marital bliss rituals.',
     price: '₹1,101',
   },
   {
     id: 'education',
     title: 'Education & Learning',
-    image:
-      'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=400&auto=format&fit=crop',
+    image:'/images/Dhanteras Puja.jpg',
     shortDesc: 'Path to academic excellence and focus.',
     price: '₹501',
   },
   {
     id: 'wealth',
     title: 'Wealth & Finance',
-    image:
-      'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=400&auto=format&fit=crop',
+    image:'/images/Sundarkand Path.jpg',
     shortDesc: 'Financial stability and investment guidance.',
     price: '₹901',
   },
   {
     id: 'property',
     title: 'Property & Home',
-    image:
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=400&auto=format&fit=crop',
+    image:"/Founder-Page/rituals-tradition-image.jpeg",
     shortDesc: 'Vastu and property purchase timings.',
     price: '₹801',
   },
   {
     id: 'child',
     title: 'Child & Progeny',
-    image:
-      'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=400&auto=format&fit=crop',
+    image:"/Founder-Page/wisdom-guidance-image.jpeg",
     shortDesc: "Guidance for parenthood and children's future.",
     price: '₹1,201',
   },
   {
     id: 'others',
     title: 'Specific Queries',
-    image:
-      'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400&auto=format&fit=crop',
+    image:"/Founder-Page/rituals-tradition-image.jpeg",
     shortDesc: 'Answers to any other specific life questions.',
     price: '₹501',
   },
@@ -163,8 +153,8 @@ export default function Astrology() {
 
             return (
               <Link key={cat.id} to={`/astrology/${cat.id}`} className="block h-full">
-                <Card className="group flex h-full flex-col overflow-hidden border-stone-200 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                  <div className="relative h-48 overflow-hidden">
+                <Card className="group flex h-full flex-col overflow-hidden border-stone-200 bg-amber-50 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  <div className="relative aspect-square overflow-hidden">
                     <img
                       src={cat.image}
                       alt={localizedCategory.title}

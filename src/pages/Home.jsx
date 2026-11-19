@@ -91,14 +91,13 @@ export default function Home() {
           {featuredPujas.map((pooja) => (
             <Card
               key={pooja.id}
-              className="group hover:shadow-xl transition-all duration-300 border-none shadow-md overflow-hidden bg-card"
+              className="group hover:shadow-xl transition-all duration-300 border-none shadow-md overflow-hidden bg-amber-50"
             >
-              <div className="h-48 overflow-hidden relative">
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10" />
+              <div className="aspect-square overflow-hidden relative">
                 <img
                   src={pooja.image}
                   alt={pooja.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <CardHeader className="pb-2">

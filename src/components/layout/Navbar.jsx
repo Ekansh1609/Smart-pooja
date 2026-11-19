@@ -35,7 +35,7 @@ export function Navbar() {
               ॐ
             </div>
             <span className="font-display text-2xl font-bold text-primary tracking-wide">
-              Smart<span className="text-secondary">Pooja</span>
+              Smart<span className="text-secondary">Pujapath</span>
             </span>
           </div>
         </Link>
