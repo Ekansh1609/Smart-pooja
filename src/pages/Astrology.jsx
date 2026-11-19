@@ -153,7 +153,7 @@ export default function Astrology() {
 
             return (
               <Link key={cat.id} to={`/astrology/${cat.id}`} className="block h-full">
-                <Card className="group flex h-full flex-col overflow-hidden border-stone-200 bg-amber-50 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <Card className="group flex h-full flex-col overflow-hidden border-stone-200 bg-gradient-to-b from-[#f8d696] via-[#fae2b7] to-[#fcf2d8] text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                   <div className="relative aspect-square overflow-hidden">
                     <img
                       src={cat.image}

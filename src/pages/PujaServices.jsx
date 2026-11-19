@@ -85,7 +85,7 @@ export default function PujaServices() {
           {filteredPujas.map((puja) => (
             <Card
               key={puja.id}
-              className="group overflow-hidden border-stone-200 bg-amber-50 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+              className="group overflow-hidden border-stone-200 bg-gradient-to-b from-[#f8d696] via-[#fae2b7] to-[#fcf2d8] shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
             >
               <div className="aspect-square relative overflow-hidden">
                 <img
