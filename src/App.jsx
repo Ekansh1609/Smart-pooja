@@ -7,6 +7,7 @@ import PujaServices from './pages/PujaServices';
 import Pandits from './pages/Pandits';
 import Astrology from './pages/Astrology';
 import AstrologyDetails from './pages/AstrologyDetails';
+import Ratan from './pages/Ratan';
 import PujaDetails from './pages/PujaDetails';
 import Register from './pages/Register';
 import Founder from './pages/Founder';
@@ -26,6 +27,7 @@ function App() {
           <Route path="/pandits" element={<Pandits />} />
           <Route path="/astrology" element={<Astrology />} />
           <Route path="/astrology/:id" element={<AstrologyDetails />} />
+          <Route path="/ratan" element={<Ratan />} />
           <Route path="/register" element={<Register />} />
           <Route path="/founder" element={<Founder />} />
 

@@ -23,6 +23,7 @@ export function Navbar() {
     { href: '/founder', label: 'Founder' },
     /* { href: '/pandits', label: 'Find Pandit' }, */
     { href: '/astrology', label: 'Astrology' },
+    { href: '/ratan', label: 'Ratan' },
   ];
 
   return (
@@ -47,14 +48,14 @@ export function Navbar() {
               <div
                 className={cn(
                   'text-lg font-medium transition-colors hover:text-primary relative group',
-                  location === link.href ? 'text-primary font-semibold' : 'text-muted-foreground'
+                  location.pathname === link.href ? 'text-primary font-semibold' : 'text-muted-foreground'
                 )}
               >
                 {link.label}
                 <span
                   className={cn(
                     'absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full',
-                    location === link.href ? 'w-full' : ''
+                    location.pathname === link.href ? 'w-full' : ''
                   )}
                 />
               </div>
@@ -103,7 +104,7 @@ export function Navbar() {
               <div
                 className={cn(
                   'text-lg py-2 px-4 rounded-md transition-colors',
-                  location === link.href
+                  location.pathname === link.href
                     ? 'bg-primary/10 text-primary font-semibold'
                     : 'text-foreground hover:bg-muted'
                 )}

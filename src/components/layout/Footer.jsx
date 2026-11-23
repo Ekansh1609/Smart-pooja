@@ -58,6 +58,11 @@ export function Footer({ className = 'mt-20' }) {
                 </Link>
               </li>
               <li>
+                <Link to="/ratan">
+                  <div className="hover:text-primary transition-colors">Ratan</div>
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact">
                   <div className="hover:text-primary transition-colors">Contact</div>
                 </Link>
