@@ -153,7 +153,7 @@ export default function Astrology() {
 
             return (
               <Link key={cat.id} to={`/astrology/${cat.id}`} className="block h-full">
-                <Card className="group flex h-full flex-col overflow-hidden border-stone-200 bg-gradient-to-b from-[#f8d696] via-[#fae2b7] to-[#fcf2d8] text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <Card className="group flex h-full flex-col overflow-hidden border-stone-200 bg-gradient-to-b from-[#FF9933] via-[#ffbd80] to-[#fbe9d8] text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                   <div className="relative aspect-square overflow-hidden">
                     <img
                       src={cat.image}
@@ -162,7 +162,7 @@ export default function Astrology() {
                     />
                   </div>
                   <CardHeader className="p-4 pb-2">
-                    <CardTitle className="text-xl font-display font-bold transition-colors group-hover:text-primary">
+                    <CardTitle className="text-xl font-display font-bold">
                       {localizedCategory.title}
                     </CardTitle>
                   </CardHeader>
@@ -173,7 +173,7 @@ export default function Astrology() {
                     <p className="font-bold text-secondary text-sm">Starts at {cat.price}</p>
                   </CardContent>
                   <div className="mt-auto p-4 pt-0">
-                    <div className="inline-flex min-h-9 w-full items-center justify-center gap-2 whitespace-nowrap rounded-md border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white">
+                    <div className="inline-flex min-h-9 w-full items-center justify-center gap-2 whitespace-nowrap rounded-md border border-primary bg-primary px-4 py-2 text-sm font-medium text-primary-foreground">
                       View Details
                     </div>
                   </div>

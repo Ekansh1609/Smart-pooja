@@ -91,7 +91,7 @@ export default function Home() {
           {featuredPujas.map((pooja) => (
             <Card
               key={pooja.id}
-              className="group hover:shadow-xl transition-all duration-300 border-none shadow-md overflow-hidden bg-gradient-to-b from-[#f8d696] via-[#fae2b7] to-[#fcf2d8]"
+              className="group hover:shadow-xl transition-all duration-300 border-none shadow-md overflow-hidden bg-gradient-to-b from-[#FF9933] via-[#ffbd80] to-[#fbe9d8]"
             >
               <div className="aspect-square overflow-hidden relative">
                 <img
@@ -101,7 +101,7 @@ export default function Home() {
                 />
               </div>
               <CardHeader className="pb-2">
-                <h3 className="text-xl font-display font-semibold group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-display font-semibold">
                   {pooja.name}
                 </h3>
               </CardHeader>
@@ -119,7 +119,7 @@ export default function Home() {
                 <Link to={`/poojas/${pooja.id}`}>
                   <Button
                     variant="outline"
-                    className="w-full border-primary/20 text-primary transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                    className="w-full border-primary bg-primary text-primary-foreground hover:border-primary hover:bg-primary hover:text-primary-foreground"
                   >
                     Book Now
                   </Button>

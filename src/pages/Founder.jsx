@@ -13,21 +13,21 @@ export default function Founder() {
           <img src={founderHero} alt="" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/25" />
         </div>
-        <div className="page-container relative z-10 grid items-center gap-10 py-12 text-white sm:py-16 md:grid-cols-[1.05fr_0.95fr] md:gap-14 lg:gap-20">
-          <div className="max-w-2xl">
-            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/20 px-4 py-1.5 text-sm font-medium text-primary-foreground backdrop-blur-sm">
+        <div className="page-container relative z-10 grid items-center gap-[clamp(0.5rem,2svh,1.5rem)] py-[clamp(0.75rem,3svh,2rem)] text-white md:grid-cols-[1.05fr_0.95fr] md:gap-14 md:py-16 lg:gap-20">
+          <div className="order-last max-w-2xl md:order-none">
+            <p className="mb-[clamp(0.5rem,2svh,1.25rem)] inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/20 px-4 py-1.5 text-sm font-medium text-primary-foreground backdrop-blur-sm md:mb-5">
               <span aria-hidden="true" className="h-2 w-2 animate-pulse rounded-full bg-primary" />
               Meet Our Founder
             </p>
-            <h2 className="font-display text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
+            <h2 className="font-display text-[clamp(1.75rem,6svh,3rem)] font-bold leading-tight text-white md:text-5xl lg:text-7xl">
               Guided by Tradition, Dedicated to You.
             </h2>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-stone-200 sm:text-xl">
+            <p className="mt-[clamp(0.75rem,2.5svh,1.5rem)] max-w-xl text-lg leading-relaxed text-stone-200 sm:text-xl md:mt-6">
               Add founder introduction here.
             </p>
             <a
               href="#founder-story"
-              className="mt-8 inline-flex min-h-14 items-center justify-center gap-2 rounded-full border border-white/30 bg-transparent px-8 py-3 text-lg font-medium text-white shadow-lg backdrop-blur-sm transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="mt-[clamp(0.75rem,2.5svh,2rem)] inline-flex min-h-14 items-center justify-center gap-2 rounded-full border border-white/30 bg-transparent px-8 py-3 text-lg font-medium text-white shadow-lg backdrop-blur-sm transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:mt-8"
             >
               Know His Story
               <ArrowDown aria-hidden="true" className="h-4 w-4" />
@@ -36,7 +36,7 @@ export default function Founder() {
           <img
             src="/Founder-Page/founder-hero.png"
             alt="Founder"
-            className="mx-auto h-auto w-full max-w-md object-contain md:h-[min(70svh,calc(100svh-13rem))] md:w-auto md:max-w-full"
+            className="order-first mx-auto h-[clamp(9rem,40svh,20rem)] w-auto max-w-full object-contain md:order-none md:h-[min(70svh,calc(100svh-13rem))] md:w-auto md:max-w-full"
             style={{
               maskImage:
                 'linear-gradient(to bottom, black 0%, black 58%, transparent 100%), linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)',

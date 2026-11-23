@@ -85,7 +85,7 @@ export default function PujaServices() {
           {filteredPujas.map((puja) => (
             <Card
               key={puja.id}
-              className="group overflow-hidden border-stone-200 bg-gradient-to-b from-[#f8d696] via-[#fae2b7] to-[#fcf2d8] shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+              className="group overflow-hidden border-stone-200 bg-gradient-to-b from-[#FF9933] via-[#ffbd80] to-[#fbe9d8] shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
             >
               <div className="aspect-square relative overflow-hidden">
                 <img
@@ -98,7 +98,7 @@ export default function PujaServices() {
                 </Badge>
               </div>
               <CardHeader className="p-4 pb-2">
-                <h3 className="text-xl font-display font-bold group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-display font-bold">
                   {puja.name}
                 </h3>
               </CardHeader>
@@ -115,7 +115,7 @@ export default function PujaServices() {
               <CardFooter className="p-4 pt-0 mt-auto">
                 <Link to={`/poojas/${puja.id}`} className="w-full">
                   <Button
-                    className="w-full bg-primary/10 text-primary hover:bg-primary hover:text-white border-primary/20"
+                    className="w-full border-primary bg-primary text-primary-foreground hover:border-primary hover:bg-primary hover:text-primary-foreground"
                     variant="outline"
                   >
                     View Details
