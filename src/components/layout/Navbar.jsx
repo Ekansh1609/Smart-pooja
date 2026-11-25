@@ -28,26 +28,28 @@ export function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="page-container flex h-20 items-center justify-between">
+      <div className="w-full max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
         {/* Logo */}
-        <Link to="/">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl border-2 border-accent">
-              ॐ
-            </div>
-            <span className="font-display text-2xl font-bold text-primary tracking-wide">
+        <Link to="/" className="flex items-center shrink-0">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <img
+              src="/Smart-Puja-Logo.png"
+              alt="Smart Puja Path"
+              className="h-12 sm:h-13 lg:h-14 xl:h-16 w-auto aspect-square object-contain shrink-0"
+            />
+            <span className="font-display text-xl sm:text-2xl lg:text-[1.5rem] xl:text-[1.75rem] font-bold text-primary tracking-wide leading-none whitespace-nowrap">
               Smart<span className="text-secondary">Pujapath</span>
             </span>
           </div>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden items-center gap-6 lg:flex xl:gap-8">
+        <div className="hidden items-center gap-3.5 lg:gap-4 xl:gap-7 lg:flex">
           {navLinks.map((link) => (
             <Link key={link.href} to={link.href} onClick={() => handleNavigationClick(link.href)}>
               <div
                 className={cn(
-                  'text-lg font-medium transition-colors hover:text-primary relative group',
+                  'text-[15px] xl:text-lg font-medium transition-colors hover:text-primary relative group whitespace-nowrap',
                   location.pathname === link.href ? 'text-primary font-semibold' : 'text-muted-foreground'
                 )}
               >
@@ -64,9 +66,9 @@ export function Navbar() {
         </div>
 
         {/* Actions */}
-        <div className="hidden items-center gap-3 lg:flex xl:gap-4">
-          <div className="flex items-center gap-2 mr-2">
-            <Globe className="w-4 h-4 text-primary" />
+        <div className="hidden items-center gap-2.5 lg:flex xl:gap-3.5 shrink-0">
+          <div className="flex items-center gap-2 mr-1 xl:mr-2">
+            <Globe className="w-4 h-4 text-primary shrink-0" />
             <select 
               value={language} 
               onChange={(e) => toggleLanguage(e.target.value)}
@@ -78,9 +80,9 @@ export function Navbar() {
           </div>
           <Button
             variant="outline"
-            className="border-primary text-primary hover:bg-primary/10"
+            className="border-primary text-primary hover:bg-primary/10 px-3 lg:px-3.5 xl:px-4 text-sm xl:text-base whitespace-nowrap shrink-0"
           >
-            <Phone className="w-4 h-4 mr-2" />
+            <Phone className="w-4 h-4 mr-1.5 xl:mr-2 shrink-0" />
             +919005448001
           </Button>
           <Link to="/register">

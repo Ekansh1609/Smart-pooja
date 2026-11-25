@@ -1,6 +1,6 @@
 import { Button } from '../ui/button';
 import { ArrowRight } from 'lucide-react';
-import heroImage from '../../assets/generated_images/traditional_indian_pooja_ceremony_havan.png';
+import heroImage from '../../assets/Home/home-hero-background.png';
 import { Link } from 'react-router-dom';
 
 export function Hero() {
@@ -10,10 +10,10 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Traditional Pooja Ceremony"
+          alt="Smart Puja Path"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30 sm:to-transparent" />
       </div>
 
       {/* Content */}

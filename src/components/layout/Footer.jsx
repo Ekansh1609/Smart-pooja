@@ -5,17 +5,21 @@ export function Footer({ className = 'mt-20' }) {
   return (
     <footer className={`bg-stone-900 text-stone-300 pt-16 pb-8 ${className}`}>
       <div className="page-container">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 xl:gap-12">
           {/* Brand */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg border border-accent">
-                ॐ
+          <div className="lg:col-span-2 space-y-4">
+            <Link to="/" className="inline-block mb-4">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <img
+                  src="/Smart-Puja-Logo.png"
+                  alt="Smart Puja Path"
+                  className="h-20 sm:h-24 w-auto aspect-square object-contain shrink-0"
+                />
+                <span className="font-display text-2xl sm:text-3xl font-bold text-white tracking-wide leading-tight">
+                  Smart<span className="text-primary">Pujapath</span>
+                </span>
               </div>
-              <span className="font-display text-2xl font-bold text-white tracking-wide">
-                Smart<span className="text-primary">Pujapath</span>
-              </span>
-            </div>
+            </Link>
             <p className="text-sm leading-relaxed opacity-80">
               Bringing divinity to your doorstep. We connect you with experienced Vedic Pandits for
               all your spiritual needs, ensuring authentic rituals and peace of mind.
@@ -34,7 +38,7 @@ export function Footer({ className = 'mt-20' }) {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="text-white font-display text-xl mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
@@ -71,7 +75,7 @@ export function Footer({ className = 'mt-20' }) {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="text-white font-display text-xl mb-6">Popular Poojas</h3>
             <ul className="space-y-3">
               <li>
@@ -103,7 +107,7 @@ export function Footer({ className = 'mt-20' }) {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="text-white font-display text-xl mb-6">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
@@ -116,7 +120,7 @@ export function Footer({ className = 'mt-20' }) {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span className="min-w-0 break-words">gurukulam13@gmail.com</span>
+                <span className="min-w-0 break-words text-[13px] xl:text-sm">gurukulam13@gmail.com</span>
               </li>
             </ul>
           </div>
