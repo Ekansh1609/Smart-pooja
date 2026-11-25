@@ -24,6 +24,7 @@ export function Navbar() {
     /* { href: '/pandits', label: 'Find Pandit' }, */
     { href: '/astrology', label: 'Astrology' },
     { href: '/ratan', label: 'Ratan' },
+    { href: '/gallery', label: 'Gallery' },
   ];
 
   return (
