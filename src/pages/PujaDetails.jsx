@@ -172,7 +172,7 @@ export default function PujaDetails() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-12">
           {/* Left: Puja Info */}
           <div className="lg:col-span-3 space-y-6">
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-xl">
               <img src={puja.image} alt={puja.name} className="w-full h-full object-cover" />
               <Badge className="absolute top-4 left-4 bg-secondary text-white text-sm px-3 py-1">
                 {puja.category}
@@ -216,7 +216,7 @@ export default function PujaDetails() {
 
           {/* Right: Booking Form */}
           <div className="lg:col-span-2">
-            <Card className="shadow-xl border-primary/10 sticky top-24">
+            <Card className="shadow-xl border-primary/10">
               <CardHeader className="bg-primary text-primary-foreground rounded-t-lg">
                 <CardTitle className="text-xl font-display flex items-center gap-2">
                   <Calendar className="w-5 h-5" />

@@ -84,57 +84,65 @@ export default function Home() {
       <Hero />
 
       {/* Services Section */}
-      <section id="our-divine-services" className="page-container scroll-mt-20 py-20">
-        <SectionHeader title="Our Divine Services" subtitle="Authentic Vedic Rituals" />
+      <section
+        id="our-divine-services"
+        className="w-full relative scroll-mt-20 py-20 overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-100/70 via-orange-50/25 to-background border-y border-orange-100/50"
+      >
+        <div className="page-container relative z-10">
+          <SectionHeader title="Our Divine Services" subtitle="Authentic Vedic Rituals" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {featuredPujas.map((pooja) => (
-            <Card
-              key={pooja.id}
-              className="group hover:shadow-xl transition-all duration-300 border-none shadow-md overflow-hidden bg-gradient-to-b from-[#FF9933] via-[#ffbd80] to-[#fbe9d8]"
-            >
-              <div className="aspect-square overflow-hidden relative">
-                <img
-                  src={pooja.image}
-                  alt={pooja.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <CardHeader className="pb-2">
-                <h3 className="text-xl font-display font-semibold">
-                  {pooja.name}
-                </h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-sm line-clamp-2 mb-4">{pooja.shortDesc}</p>
-                <div className="flex items-center gap-4 text-sm font-medium text-stone-600">
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4 text-primary" />
-                    {pooja.duration}
-                  </div>
-                  <div className="text-secondary font-bold">{pooja.price}</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featuredPujas.map((pooja) => (
+              <Card
+                key={pooja.id}
+                className="group hover:shadow-xl transition-all duration-300 border-none shadow-md overflow-hidden bg-gradient-to-b from-[#FF9933] via-[#ffbd80] to-[#fbe9d8] flex flex-col"
+              >
+                <div className="aspect-square overflow-hidden relative">
+                  <img
+                    src={pooja.image}
+                    alt={pooja.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
-              </CardContent>
-              <CardFooter>
-                <Link to={`/poojas/${pooja.id}`}>
-                  <Button
-                    variant="outline"
-                    className="w-full border-primary bg-primary text-primary-foreground hover:border-primary hover:bg-primary hover:text-primary-foreground"
-                  >
-                    Book Now
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
+                <CardHeader className="pb-2">
+                  <h3 className="text-xl font-display font-semibold">
+                    {pooja.name}
+                  </h3>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-muted-foreground text-sm line-clamp-2">{pooja.shortDesc}</p>
+                  {/* Time and Price (Hidden - to unhide, remove comment wrapper) */}
+                  {/*
+                  <div className="flex items-center gap-4 text-sm font-medium text-stone-600">
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-4 h-4 text-primary" />
+                      {pooja.duration}
+                    </div>
+                    <div className="text-secondary font-bold">{pooja.price}</div>
+                  </div>
+                  */}
+                </CardContent>
+                <CardFooter className="mt-auto">
+                  <Link to={`/poojas/${pooja.id}`}>
+                    <Button
+                      variant="outline"
+                      className="w-full border-primary bg-primary text-primary-foreground hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                    >
+                      Book Now
+                    </Button>
+                  </Link>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
 
-        <div className="text-center mt-12">
-          <Link to="/poojas">
-            <Button variant="link" className="text-primary text-lg font-medium">
-              View All Services <ChevronRight className="w-4 h-4 ml-1" />
-            </Button>
-          </Link>
+          <div className="text-center mt-12">
+            <Link to="/poojas">
+              <Button variant="link" className="text-primary text-lg font-medium">
+                View All Services <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

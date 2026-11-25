@@ -103,7 +103,9 @@ export default function PujaServices() {
                 </h3>
               </CardHeader>
               <CardContent className="p-4 pt-0 flex-grow">
-                <p className="text-sm text-muted-foreground line-clamp-2 mb-4">{puja.shortDesc}</p>
+                <p className="text-sm text-muted-foreground line-clamp-2">{puja.shortDesc}</p>
+                {/* Time and Price (Hidden - to unhide, remove comment wrapper) */}
+                {/*
                 <div className="flex items-center justify-between text-sm font-semibold mt-auto">
                   <div className="flex items-center gap-1 text-primary">
                     <Clock className="w-4 h-4" />
@@ -111,6 +113,7 @@ export default function PujaServices() {
                   </div>
                   <div className="text-secondary">{puja.price}</div>
                 </div>
+                */}
               </CardContent>
               <CardFooter className="p-4 pt-0 mt-auto">
                 <Link to={`/poojas/${puja.id}`} className="w-full">
