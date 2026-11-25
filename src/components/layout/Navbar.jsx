@@ -20,7 +20,7 @@ export function Navbar() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/poojas', label: 'Pooja Services' },
-    { href: '/founder', label: 'Founder' },
+    { href: '/about-us', label: 'About Us' },
     /* { href: '/pandits', label: 'Find Pandit' }, */
     { href: '/astrology', label: 'Astrology' },
     { href: '/ratan', label: 'Ratan' },

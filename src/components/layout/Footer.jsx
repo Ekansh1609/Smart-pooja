@@ -57,7 +57,7 @@ export function Footer({ className = 'mt-20' }) {
                 </Link>
               </li>
               <li>
-                <Link to="/founder">
+                <Link to="/about-us">
                   <div className="hover:text-primary transition-colors">About Us</div>
                 </Link>
               </li>

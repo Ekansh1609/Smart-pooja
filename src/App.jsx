@@ -12,6 +12,7 @@ import Gallery from './pages/Gallery';
 import PujaDetails from './pages/PujaDetails';
 import Register from './pages/Register';
 import Founder from './pages/Founder';
+import AboutUs from './pages/AboutUs';
 import NotFound from './pages/not-found';
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
           <Route path="/astrology/:id" element={<AstrologyDetails />} />
           <Route path="/ratan" element={<Ratan />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/register" element={<Register />} />
           <Route path="/founder" element={<Founder />} />
 
