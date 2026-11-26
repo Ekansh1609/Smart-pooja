@@ -86,7 +86,7 @@ export default function Home() {
       {/* Services Section */}
       <section
         id="our-divine-services"
-        className="w-full relative scroll-mt-20 py-20 overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-100/70 via-orange-50/25 to-background border-y border-orange-100/50"
+        className="w-full relative scroll-mt-20 py-20 overflow-hidden bg-gradient-to-b from-orange-100/90 via-amber-100/75 to-orange-100/85 border-y border-orange-200/90"
       >
         <div className="page-container relative z-10">
           <SectionHeader title="Our Divine Services" subtitle="Authentic Vedic Rituals" />
