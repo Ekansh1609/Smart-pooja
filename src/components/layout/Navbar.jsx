@@ -21,6 +21,7 @@ export function Navbar() {
     { href: '/', label: 'Home' },
     { href: '/poojas', label: 'Pooja Services' },
     { href: '/about-us', label: 'About Us' },
+    { href: '/founder', label: 'Founder' },
     /* { href: '/pandits', label: 'Find Pandit' }, */
     { href: '/astrology', label: 'Astrology' },
     { href: '/ratan', label: 'Ratan' },
